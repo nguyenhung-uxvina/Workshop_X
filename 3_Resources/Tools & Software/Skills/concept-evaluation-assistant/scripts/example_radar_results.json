@@ -1,0 +1,78 @@
+{
+  "criteria": [
+    {
+      "name": "Hiệu năng tác chiến",
+      "weight": 0.29999999999999993
+    },
+    {
+      "name": "Độ tin cậy",
+      "weight": 0.20000000000000007
+    },
+    {
+      "name": "Chi phí toàn đời",
+      "weight": 0.2
+    },
+    {
+      "name": "Tự chủ công nghệ",
+      "weight": 0.14999999999999994
+    },
+    {
+      "name": "Thời gian triển khai",
+      "weight": 0.10000000000000002
+    },
+    {
+      "name": "Khả năng tương tác",
+      "weight": 0.05000000000000001
+    }
+  ],
+  "results": [
+    {
+      "name": "PA-B: Radar 2D nội địa",
+      "scores": [
+        3,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "cost": 350,
+      "total_score": 3.7,
+      "value": 0.0106,
+      "score_rank": 1,
+      "value_rank": 1
+    },
+    {
+      "name": "PA-C: Hệ thống kết hợp",
+      "scores": [
+        3.5,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "cost": 500,
+      "total_score": 2.8,
+      "value": 0.0056,
+      "score_rank": 2,
+      "value_rank": 2
+    },
+    {
+      "name": "PA-A: Radar 3D nhập khẩu",
+      "scores": [
+        4,
+        4,
+        0,
+        1,
+        3,
+        4
+      ],
+      "cost": 630,
+      "total_score": 2.65,
+      "value": 0.0042,
+      "score_rank": 3,
+      "value_rank": 3
+    }
+  ]
+}

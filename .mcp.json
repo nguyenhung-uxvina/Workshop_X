@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "tana-iparag-bridge": {
+      "command": "python",
+      "args": ["3_Resources/Tools & Software/tana_iparag_mcp.py"],
+      "env": {
+        "VAULT_PATH": "D:\\Workshop_X"
+      }
+    }
+  }
+}

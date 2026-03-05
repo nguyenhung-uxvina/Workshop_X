@@ -1,0 +1,32 @@
+Subsystem,Ref,Description,Value,Package,Part Number,Qty,Unit Price (VND),Total (VND),Source,Import Required,Notes
+Piezo,PZ1,PZT-5A disc 20mm x 1mm,"150pC/N, 500pF",20mm disc,PZT-5A-20,1,15000,15000,Nhat Tao,No,"d33=150pC/N, Cp=500pF"
+Piezo,J1,"Piezo connector, 2-pin",-,JST-PH 2P,JST-PH-2,1,1000,1000,Nhat Tao,No,
+ChargeAmp,U1,"Op-amp, JFET input",-,DIP-8,TL072,1,5000,5000,Dien Tu Thanh,No,"GBW=3MHz, low input bias, dual supply +/-5V"
+ChargeAmp,Cf1,"Feedback capacitor, C0G/NP0",3.3nF,0805,C0G-3N3-50V,1,500,500,Nhat Tao,No,"Charge amp feedback, C0G for stability. F1 fix: was 100pF"
+ChargeAmp,Rf1,"Feedback resistor, high value",10MOhm,0805,RC0805-10M,1,200,200,Nhat Tao,No,Low-freq pole at 4.8Hz (with 3.3nF Cf)
+ChargeAmp,R1,Input bias resistor,10MOhm,0805,RC0805-10M,1,200,200,Nhat Tao,No,Bias path for non-inverting input
+ChargeAmp,C1,"Decoupling cap, supply",100nF,0805,X7R-100nF-25V,2,200,400,Nhat Tao,No,VCC/VEE decoupling for U1
+Filter,U2,"Op-amp, dual, Sallen-Key filter",-,DIP-8,TL072,1,5000,5000,Dien Tu Thanh,No,"One half for HPF, one for LPF. Dual supply +/-5V"
+Filter,"R2,R3",HPF resistors (2kHz cutoff),8.2kOhm,0805,RC0805-8K2,2,100,200,Nhat Tao,No,"Sallen-Key HPF, fc=2kHz"
+Filter,"C2,C3",HPF capacitors,10nF,0805,C0G-10nF-50V,2,300,600,Nhat Tao,No,C0G for filter accuracy
+Filter,"R4,R5",LPF resistors (8kHz cutoff),2kOhm,0805,RC0805-2K0,2,100,200,Nhat Tao,No,"Sallen-Key LPF, fc=8kHz"
+Filter,"C4,C5",LPF capacitors,10nF,0805,C0G-10nF-50V,2,300,600,Nhat Tao,No,C0G for filter accuracy
+Gain,U3,"Op-amp, gain stage",-,DIP-8,LM358,1,3000,3000,Dien Tu Thanh,No,"Non-inverting, gain=10x, single +5V supply, biased to 1.65V"
+Gain,R6,Gain feedback resistor,9.1kOhm,0805,RC0805-9K1,1,100,100,Nhat Tao,No,Gain = 1 + R6/R7 = 10.1x
+Gain,R7,Gain ground resistor,1kOhm,0805,RC0805-1K0,1,100,100,Nhat Tao,No,
+Gain,C6,"Decoupling cap, supply",100nF,0805,X7R-100nF-25V,1,200,200,Nhat Tao,No,
+Bias,R9,Bias divider high-side,10kOhm,0805,RC0805-10K,1,100,100,Nhat Tao,No,Vbias = 3.3V * R10/(R9+R10) = 1.65V
+Bias,R10,Bias divider low-side,10kOhm,0805,RC0805-10K,1,100,100,Nhat Tao,No,Matched pair with R9 for accurate 1.65V
+Bias,C15,Bias decoupling capacitor,100nF,0805,X7R-100nF-25V,1,200,200,Nhat Tao,No,Stabilizes Vbias node
+Clamp,"D1,D2",Schottky clamping diodes,-,SOD-323,BAT54S,2,500,1000,Nhat Tao,No,Clamp to 0V and 3.3V rails
+Clamp,R8,Series limiting resistor,100Ohm,0805,RC0805-100R,1,100,100,Nhat Tao,No,Limits clamp diode current
+ADC/MCU,U4,MCU with 12-bit ADC,-,LQFP-64,STM32F411CEU6,1,65000,65000,Dien Tu Thanh,Yes,"12-bit ADC, 200kSps, 3.3V, ARM Cortex-M4"
+ADC/MCU,Y1,Crystal oscillator,8MHz,HC-49S,HC49S-8MHz,1,2000,2000,Nhat Tao,No,
+ADC/MCU,"C7,C8",Crystal load capacitors,20pF,0805,C0G-20pF-50V,2,200,400,Nhat Tao,No,
+ADC/MCU,C9-C12,MCU decoupling capacitors,100nF,0805,X7R-100nF-25V,4,200,800,Nhat Tao,No,
+Power,U5,+5V LDO for analog section,"5.0V, 800mA",SOT-223,AMS1117-5.0,1,2000,2000,Nhat Tao,No,"Input 7-12V, +5V for TL072/LM358 analog"
+Power,U6,3.3V LDO for MCU/ADC,"3.3V, 300mA",SOT-223,AMS1117-3.3,1,2000,2000,Nhat Tao,No,"Input from +5V rail, output 3.3V for STM32"
+Power,U7,Charge pump -5V inverter,-5V,DIP-8,ICL7660,1,3000,3000,Nhat Tao,No,Converts +5V to -5V for TL072 negative rail
+Power,"C13,C14",LDO I/O capacitors (5V),10uF,0805,X5R-10uF-16V,2,500,1000,Nhat Tao,No,Input/output caps for U5 (AMS1117-5.0)
+Power,"C16,C17",LDO I/O capacitors (3.3V),10uF,0805,X5R-10uF-16V,2,500,1000,Nhat Tao,No,Input/output caps for U6 (AMS1117-3.3)
+Power,"C18,C19",Charge pump capacitors,10uF,0805,X5R-10uF-16V,2,500,1000,Nhat Tao,No,Flying cap + output cap for ICL7660
