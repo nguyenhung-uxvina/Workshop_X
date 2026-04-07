@@ -1,9 +1,9 @@
 ---
 created: 2026-03-05
-updated: 2026-03-05
+updated: 2026-04-06
 type: clipping
-status: inbox
-tags: [#type/clipping, #status/inbox, #topic/electronics, #topic/technology]
+status: active
+tags: [#type/clipping, #status/active, #topic/technology]
 source: Tana voice memo 09:20, 2026-03-05
 ---
 
@@ -21,6 +21,6 @@ Hệ thống mô phỏng huấn luyện cho IGLA trên tàu. Đó anh xem là hi
 
 ## Cần xử lý
 
-- [ ] Phân loại: Workshop X Area hay BB-01 reference?
-- [ ] Bổ sung context: mục đích ghi chú, dự án liên quan
-- [ ] Xem xét tạo permanent note nếu có insight
+- [ ] Bổ sung context kỹ thuật: đặc điểm IGLA naval variant vs. land-based
+- [ ] So sánh với VN-ADS Air Defense Systems (on-hold) — có overlap không?
+- [ ] Xem xét tạo project brief riêng nếu đủ scope

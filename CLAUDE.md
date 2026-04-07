@@ -29,6 +29,7 @@ Workshop_X/
 │   ├── THỊNH 12-Week Practice Protocol/ (deadline: 2026-05-28)
 │   ├── BB-01_LOMAH/                     (deadline: 2026-09-05)
 │   ├── IRONMESH Portfolio Roadmap/      (deadline: 2026-12-31, rolling)
+│   ├── VN-CUAV-SIM-001 Maritime Counter-UAVUSV Training/ (active, Phase 2 next)
 │   ├── VN-AST-MSL-001 Towed Target/    (on-hold)
 │   ├── UAV Catapult/                    (on-hold)
 │   ├── VN-NVL Naval Training/          (on-hold, 5 products)
