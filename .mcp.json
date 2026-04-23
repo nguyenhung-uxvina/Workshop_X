@@ -4,7 +4,16 @@
       "command": "python",
       "args": ["3_Resources/Tools & Software/tana_iparag_mcp.py"],
       "env": {
-        "VAULT_PATH": "D:\\Workshop_X"
+        "VAULT_PATH": "E:\\Workshop_X"
+      }
+    },
+    "erpnext": {
+      "command": "npx",
+      "args": ["-y", "@casys/mcp-erpnext"],
+      "env": {
+        "ERPNEXT_URL": "http://erp.workshopx.local:8080",
+        "ERPNEXT_API_KEY": "6d455513a994e9c",
+        "ERPNEXT_API_SECRET": "79b2aad066840df"
       }
     }
   }

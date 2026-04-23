@@ -1,2 +1,35 @@
 .obsidian/
 .claude/
+
+# Large binary files — keep locally, exclude from git
+*.pdf
+*.docx
+*.xlsx
+*.zip
+*.stp
+*.X_T
+*.gguf
+
+# Images — keep locally, track only in project deliverables
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.svg
+
+# Runtime artifacts
+excalidraw.log
+*.base
+progress.md
+docs/
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

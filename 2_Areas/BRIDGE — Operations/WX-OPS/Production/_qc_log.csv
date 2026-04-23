@@ -1,0 +1,4 @@
+date,wo_id,product,variant,gate,inspector,result,ncr_id,ncr_category,ncr_description,rework_hours,root_cause,corrective_action
+2026-04-15,WO-2026-001,TOWED-TARGET,30mm Standard,Gate-CKCX,CEO,PASS,,,,,,
+2026-04-15,WO-2026-002,VN-MGM,V1-NAVAL-12.7,Gate-CKCX,CEO,PASS,,,,,,
+2026-04-15,WO-2026-004,VN-CUAV-SIM-001,LITE PA-2 SS1 PoC,Gate-CKCX,CEO,FAIL,NCR-2026-001,Dimensional,Weapon body slot 0.3mm lệch so với drawing,2,Fixture chưa calibrate cho part mới,Calibrate fixture + re-cut slot

@@ -1,0 +1,24 @@
+product,variant,item_code,qty_per_unit,uom,notes
+TOWED-TARGET,30mm Standard,ALU-6061-10,2,tấm,Thân + cánh chịu lực
+TOWED-TARGET,30mm Standard,ESP32-WROOM,1,cái,Flight controller
+TOWED-TARGET,30mm Standard,ENCODER-600P,2,cái,Servo feedback Az+El
+TOWED-TARGET,30mm Standard,BOLT-M10x30,16,cái,Assembly thân-cánh-khung
+TOWED-TARGET,30mm Standard,STEEL-60x40,1.5,m,Khung nội bộ
+VN-MGM,V1-NAVAL-12.7,STEEL-60x40,10,m,Base frame + trục xoay + bệ đỡ
+VN-MGM,V1-NAVAL-12.7,STEEL-PIPE-114,1.2,m,Ống thép pedestal column
+VN-MGM,V1-NAVAL-12.7,SLEWING-RING-300,1,cái,Slewing ring bearing COTS (traverse)
+VN-MGM,V1-NAVAL-12.7,WORM-GEAR-SET,1,bộ,Worm gear elevation set (worm + wheel) COTS
+VN-MGM,V1-NAVAL-12.7,TRUNNION-PIN-25,2,cái,Trunnion pins cradle (tự gia công từ thép C45)
+VN-MGM,V1-NAVAL-12.7,SPADE-GRIP,2,cái,Tay cầm điều khiển xoay ngang
+VN-MGM,V1-NAVAL-12.7,PAINT-KIT-OD,1,bộ,Sơn lót + sơn phủ OD green cho 1 unit
+VN-MGM,V1-NAVAL-12.7,BOLT-M10x30,24,cái,Structural assembly
+TARGET-DRONE,Simple V1,ALU-6061-10,0.5,tấm,Khung + cánh
+TARGET-DRONE,Simple V1,ESP32-WROOM,1,cái,Flight controller
+TARGET-DRONE,Simple V1,BOLT-M10x30,8,cái,Motor mount + assembly
+VN-CUAV-SIM-001,LITE PA-2 SS1 PoC,ALU-6061-10,3,tấm,Weapon body + cradle frame + mount
+VN-CUAV-SIM-001,LITE PA-2 SS1 PoC,ENCODER-600P,2,cái,Az + El position
+VN-CUAV-SIM-001,LITE PA-2 SS1 PoC,SOLENOID-24V,1,cái,Trigger mechanism
+VN-CUAV-SIM-001,LITE PA-2 SS1 PoC,BTS7960,1,cái,Motor driver
+VN-CUAV-SIM-001,LITE PA-2 SS1 PoC,NFC-RC522,1,cái,Weapon ID reader
+VN-CUAV-SIM-001,LITE PA-2 SS1 PoC,ESP32-WROOM,1,cái,Main controller
+VN-CUAV-SIM-001,LITE PA-2 SS1 PoC,BOLT-M10x30,20,cái,Structural + quick-release

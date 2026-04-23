@@ -1,0 +1,5 @@
+date,wo_id,px,activity,hours_actual,output_qty,notes,logged_by
+2026-04-15,WO-2026-001,WS-CKCX,CNC thân towed target,8,2,2/5 thân hoàn thành - đúng tiến độ,CEO
+2026-04-15,WO-2026-002,WS-DT,Lắp motor driver + encoder,6,1,1/3 unit wiring xong - chờ BTS7960 test,CEO
+2026-04-15,WO-2026-004,WS-CKCX,CNC weapon body SS1,6,0,Fixture setup mất 3h - chưa có output,CEO
+2026-04-15,WO-2026-002,WS-CKCX,Hoàn thiện CKCX - finishing deburr kiểm tra kích thước,6,0.5,Đang giữa chừng unit 2/3,CEO

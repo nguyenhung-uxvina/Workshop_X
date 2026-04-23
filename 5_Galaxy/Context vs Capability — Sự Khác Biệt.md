@@ -48,6 +48,7 @@ Nhầm lẫn context với capability dẫn đến over-trust: bạn assume AI "
 
 - [[Phán đoán không thể uỷ thác cho AI]] — Vì context tốt không build judgment cho bạn
 - [[Shifting the Burden Archetype]] — CLAUDE.md tốt là symptomatic fix nếu dùng để replace judgment
+- [[HOK Law — Tay Não Ký Ức Của Agent]] — Agent context window = capability boundary: HOK Law cho thấy context IS capability cho AI agent, nhưng context IS NOT capability cho human judgment — phân biệt quan trọng
 
 ## Nguồn Gốc
 

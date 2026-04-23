@@ -1,0 +1,618 @@
+{
+  "commands": [
+    {
+      "id": "physical-sprint",
+      "name": "Physical Sprint",
+      "group": "execution",
+      "icon": "hammer",
+      "skillFile": "physical-sprint.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "weekly-3",
+      "name": "Weekly 3",
+      "group": "execution",
+      "icon": "target",
+      "skillFile": "weekly-3.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "hire-tracker",
+      "name": "Hire Tracker",
+      "group": "execution",
+      "icon": "users",
+      "skillFile": "hire-tracker.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "bd-pulse",
+      "name": "BD Pulse",
+      "group": "execution",
+      "icon": "phone",
+      "skillFile": "bd-pulse.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "scale-map",
+      "name": "Scale Map",
+      "group": "growth",
+      "icon": "map",
+      "skillFile": "scale-map.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "ach-recurse",
+      "name": "ACH Recurse",
+      "group": "growth",
+      "icon": "layers",
+      "skillFile": "ach-recurse.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "data-capture",
+      "name": "Data Capture",
+      "group": "growth",
+      "icon": "database",
+      "skillFile": "data-capture.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Product name (e.g., BB-01)...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "galaxy-gate",
+      "name": "Galaxy Gate",
+      "group": "guard-rails",
+      "icon": "shield-check",
+      "skillFile": "galaxy-gate.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Concept hoặc tên Galaxy note muốn check...",
+      "saveTarget": "5_Galaxy/",
+      "timeout": 600
+    },
+    {
+      "id": "analyst-trap",
+      "name": "Analyst Trap",
+      "group": "guard-rails",
+      "icon": "alert-triangle",
+      "skillFile": "analyst-trap.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "ratio-check",
+      "name": "Ratio Check",
+      "group": "guard-rails",
+      "icon": "percent",
+      "skillFile": "ratio-check.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "session-exit",
+      "name": "Session Exit",
+      "group": "guard-rails",
+      "icon": "log-out",
+      "skillFile": "session-exit.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "galaxy-links",
+      "name": "Galaxy Links Scan",
+      "group": "knowledge",
+      "icon": "link",
+      "skillFile": "galaxy-links.md",
+      "skillArgs": "scan",
+      "saveTarget": "0_Inbox/",
+      "timeout": 600
+    },
+    {
+      "id": "pipeline-status",
+      "name": "Pipeline Status",
+      "group": "knowledge",
+      "icon": "activity",
+      "skillFile": "pipeline.md",
+      "skillArgs": "status",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "learning",
+      "name": "Learning Cycle",
+      "group": "knowledge",
+      "icon": "book-open",
+      "skillFile": "learning.md",
+      "saveTarget": "3_Resources/",
+      "timeout": 600
+    },
+    {
+      "id": "nlm-health",
+      "name": "NLM Health",
+      "group": "nlm",
+      "icon": "heart-pulse",
+      "skillFile": "nlm.md",
+      "skillArgs": "health",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "nlm-query",
+      "name": "NLM Query",
+      "group": "nlm",
+      "icon": "message-circle",
+      "skillFile": "nlm.md",
+      "skillArgs": "query",
+      "promptForArgs": true,
+      "argsPlaceholder": "notebook-alias question (e.g., uav-float what are the key findings?)",
+      "saveTarget": "3_Resources/",
+      "timeout": 600
+    },
+    {
+      "id": "nlm-add-source",
+      "name": "NLM Add Source",
+      "group": "nlm",
+      "icon": "plus-circle",
+      "skillFile": "nlm.md",
+      "skillArgs": "add",
+      "promptForArgs": true,
+      "argsPlaceholder": "notebook-alias URL (e.g., lomah https://example.com/paper.pdf)",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "nlm-list",
+      "name": "NLM Notebooks",
+      "group": "nlm",
+      "icon": "list",
+      "skillFile": "nlm.md",
+      "skillArgs": "list",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "nlm-cross-query",
+      "name": "NLM Cross Query",
+      "group": "nlm",
+      "icon": "git-merge",
+      "skillFile": "nlm.md",
+      "skillArgs": "cross-query",
+      "promptForArgs": true,
+      "argsPlaceholder": "notebook1,notebook2 question (e.g., lomah,ach compare sensor approaches)",
+      "saveTarget": "3_Resources/",
+      "timeout": 600
+    },
+    {
+      "id": "nlm-audio",
+      "name": "NLM Audio Overview",
+      "group": "nlm",
+      "icon": "headphones",
+      "skillFile": "nlm.md",
+      "skillArgs": "audio --language vi",
+      "promptForArgs": true,
+      "argsPlaceholder": "notebook-alias [focus prompt] (e.g., uav-float so sánh stabilized landing pads)",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "group": "knowledge",
+      "icon": "search",
+      "skillFile": "research/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Research topic...",
+      "saveTarget": "3_Resources/",
+      "timeout": 600
+    },
+    {
+      "id": "helix-task-clarify",
+      "name": "Task Clarify (Phase 1)",
+      "group": "helix",
+      "icon": "clipboard-list",
+      "skillFile": "helix-task-clarify/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Project name...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "helix-concept-generate",
+      "name": "Concept Design (Phase 2)",
+      "group": "helix",
+      "icon": "lightbulb",
+      "skillFile": "helix-concept-generate/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Project name...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "helix-embody-realize",
+      "name": "Embody (Phase 3)",
+      "group": "helix",
+      "icon": "box",
+      "skillFile": "helix-embody-realize/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Project name...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "helix-detail-finalize",
+      "name": "Detail (Phase 4)",
+      "group": "helix",
+      "icon": "ruler",
+      "skillFile": "helix-detail-finalize/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Project name...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "helix-quality-gate",
+      "name": "Quality Gate",
+      "group": "helix",
+      "icon": "check-circle",
+      "skillFile": "helix-quality-gate/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Gate number (1-4) and project...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "helix-6flow-mapper",
+      "name": "6-Flow Mapper",
+      "group": "helix",
+      "icon": "git-branch",
+      "skillFile": "helix-6flow-mapper/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Product or subsystem...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "helix-design-journal",
+      "name": "Design Journal",
+      "group": "helix",
+      "icon": "book",
+      "skillFile": "helix-design-journal/SKILL.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "helix-integration-debt",
+      "name": "Integration Debt",
+      "group": "helix",
+      "icon": "unlink",
+      "skillFile": "helix-integration-debt/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Project name...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "helix-project-init",
+      "name": "Project Init",
+      "group": "helix",
+      "icon": "folder-plus",
+      "skillFile": "helix-project-init/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "New project name...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "helix-sync-protocol",
+      "name": "Sync Protocol",
+      "group": "helix",
+      "icon": "refresh-cw",
+      "skillFile": "helix-sync-protocol/SKILL.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "helix-shadow-dev",
+      "name": "Shadow Assumptions",
+      "group": "helix",
+      "icon": "eye",
+      "skillFile": "helix-shadow-dev/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Project name...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "helix-dfach",
+      "name": "DfACH Checklist",
+      "group": "helix",
+      "icon": "cpu",
+      "skillFile": "helix-dfach/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "ACH product name...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "bridge-dashboard",
+      "name": "CEO Dashboard",
+      "group": "bridge",
+      "icon": "layout-dashboard",
+      "skillFile": "bridge-dashboard/SKILL.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "bridge-risk-radar",
+      "name": "Risk Radar",
+      "group": "bridge",
+      "icon": "radar",
+      "skillFile": "bridge-risk-radar/SKILL.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "bridge-judgment",
+      "name": "Decision Support",
+      "group": "bridge",
+      "icon": "scale",
+      "skillFile": "bridge-judgment/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Decision or trade-off...",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "bridge-deploy-gate",
+      "name": "Deploy Gate",
+      "group": "bridge",
+      "icon": "rocket",
+      "skillFile": "bridge-deploy-gate/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Product name...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "bridge-signal-extract",
+      "name": "Signal Extract",
+      "group": "bridge",
+      "icon": "radio",
+      "skillFile": "bridge-signal-extract/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Paste transcript or describe event...",
+      "saveTarget": "0_Inbox/",
+      "timeout": 600
+    },
+    {
+      "id": "bridge-automate",
+      "name": "Automate Finder",
+      "group": "bridge",
+      "icon": "bot",
+      "skillFile": "bridge-automate/SKILL.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "bridge-cross-learn",
+      "name": "Cross-Product Learn",
+      "group": "bridge",
+      "icon": "git-compare",
+      "skillFile": "bridge-cross-learn/SKILL.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "bridge-flywheel",
+      "name": "BRIDGE Flywheel",
+      "group": "bridge",
+      "icon": "refresh-cw",
+      "skillFile": "bridge-flywheel/SKILL.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "bridge-knowledge-base",
+      "name": "Knowledge Base",
+      "group": "bridge",
+      "icon": "book-open",
+      "skillFile": "bridge-knowledge-base/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Search query or topic...",
+      "saveTarget": "3_Resources/",
+      "timeout": 600
+    },
+    {
+      "id": "bridge-talent-map",
+      "name": "Talent Map",
+      "group": "bridge",
+      "icon": "user-check",
+      "skillFile": "bridge-talent-map/SKILL.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "forge-portfolio",
+      "name": "FORGE Portfolio",
+      "group": "forge",
+      "icon": "pie-chart",
+      "skillFile": "forge-portfolio/SKILL.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "forge-shift",
+      "name": "ACH SHIFT Assessment",
+      "group": "forge",
+      "icon": "cpu",
+      "skillFile": "forge-shift/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Product name...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "forge-cost",
+      "name": "ACH Cost Analysis",
+      "group": "forge",
+      "icon": "dollar-sign",
+      "skillFile": "forge-cost/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Product name...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "forge-validate",
+      "name": "ACH Validate",
+      "group": "forge",
+      "icon": "test-tube",
+      "skillFile": "forge-validate/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Product name...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "forge-evolve",
+      "name": "Moat Assessment",
+      "group": "forge",
+      "icon": "castle",
+      "skillFile": "forge-evolve/SKILL.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "forge-pre-study",
+      "name": "Pre-Study (Stage -1)",
+      "group": "forge",
+      "icon": "scan",
+      "skillFile": "forge-pre-study/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Product idea or opportunity signal...",
+      "saveTarget": "0_Inbox/",
+      "timeout": 600
+    },
+    {
+      "id": "forge-scout",
+      "name": "ACH Scout",
+      "group": "forge",
+      "icon": "binoculars",
+      "skillFile": "forge-scout/SKILL.md",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "forge-fallback",
+      "name": "ACH Fallback Design",
+      "group": "forge",
+      "icon": "shield-off",
+      "skillFile": "forge-fallback/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Product name...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "forge-trust",
+      "name": "Customer Trust",
+      "group": "forge",
+      "icon": "handshake",
+      "skillFile": "forge-trust/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Product or customer...",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "forge-library",
+      "name": "Model Library",
+      "group": "forge",
+      "icon": "library",
+      "skillFile": "forge-library/SKILL.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "forge-flywheel",
+      "name": "Data Flywheel",
+      "group": "forge",
+      "icon": "rotate-cw",
+      "skillFile": "forge-flywheel/SKILL.md",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "forge-job-map",
+      "name": "Customer Job Map",
+      "group": "forge",
+      "icon": "map-pin",
+      "skillFile": "forge-job-map/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Product name...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "reverse-mc",
+      "name": "Reverse MC",
+      "group": "forge",
+      "icon": "table",
+      "skillFile": "reverse-mc/SKILL.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Product category (e.g., 12.7mm simulator)...",
+      "saveTarget": "1_Projects/",
+      "timeout": 600
+    },
+    {
+      "id": "learn-methodology",
+      "name": "Learn Concept",
+      "group": "learning",
+      "icon": "lightbulb",
+      "skillFile": "learn-methodology.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Concept to learn...",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "learn-practice",
+      "name": "Practice Plan",
+      "group": "learning",
+      "icon": "dumbbell",
+      "skillFile": "learn-practice.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "Skill to practice...",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    },
+    {
+      "id": "learn-track",
+      "name": "Track Learning",
+      "group": "learning",
+      "icon": "bar-chart-2",
+      "skillFile": "learn-track.md",
+      "promptForArgs": true,
+      "argsPlaceholder": "What to assess...",
+      "saveTarget": "_meta/",
+      "timeout": 600
+    }
+  ],
+  "groups": {
+    "execution": { "label": "P-CHIẾN LƯỢC", "order": 0 },
+    "growth": { "label": "Growth Engine", "order": 1 },
+    "guard-rails": { "label": "Guard Rails", "order": 2 },
+    "knowledge": { "label": "Knowledge Pipeline", "order": 2 },
+    "nlm": { "label": "NLM Notebooks", "order": 3 },
+    "helix": { "label": "HELIX — Design", "order": 4 },
+    "bridge": { "label": "BRIDGE — Operations", "order": 5 },
+    "forge": { "label": "FORGE — Strategy", "order": 6 },
+    "learning": { "label": "Learning", "order": 7 }
+  }
+}

@@ -1,0 +1,7 @@
+po_id,date,supplier,item_code,item_name,qty,uom,unit_cost_vnd,total_vnd,status,wo_ref,expected_delivery,actual_delivery,notes
+PO-2026-001,2026-04-15,Bearing VN,SLEWING-RING-300,Slewing ring bearing 300mm,5,cái,4500000,22500000,Ordered,WO-2026-005,2026-05-05,,6 units VN-MGM cho HH Shipbuilding — CRITICAL PATH
+PO-2026-002,2026-04-15,Cơ khí Tân Phát,WORM-GEAR-SET,Worm gear elevation set,5,bộ,3200000,16000000,Ordered,WO-2026-005,2026-05-05,,CRITICAL PATH — cần trước khi start WO-005
+PO-2026-003,2026-04-15,Thép Miền Nam,STEEL-60x40,Thép hộp 60×40mm,20,m,65000,1300000,Ordered,WO-2026-005+001,2026-04-22,,Cho WO-005 (60m) + bù WO-001 shortage
+PO-2026-004,2026-04-15,Đại Phát,BOLT-M10x30,Bu-lông M10×30 Inox,200,cái,3500,700000,Ordered,ALL,2026-04-18,,Replenish — all WOs đang thiếu
+PO-2026-005,2026-04-15,Linh kiện Nhật Tảo,ENCODER-600P,Rotary Encoder 600P/R,25,cái,320000,8000000,Ordered,WO-001+004,2026-04-22,,Cho TOWED-TARGET + CUAV-SIM
+PO-2026-006,2026-04-15,Linh kiện Nhật Tảo,ESP32-WROOM,ESP32-WROOM-32 DevKit,15,cái,95000,1425000,Ordered,WO-001+003+004,2026-04-22,,Cho TOWED-TARGET + TARGET-DRONE + CUAV-SIM

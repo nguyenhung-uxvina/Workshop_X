@@ -1,0 +1,234 @@
+/* Claude Bridge Sidebar Styles */
+
+.claude-bridge-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 8px;
+  gap: 4px;
+}
+
+/* Header */
+.claude-bridge-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 4px;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.claude-bridge-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.claude-bridge-status-dot.idle {
+  background-color: var(--text-success);
+}
+
+.claude-bridge-status-dot.running {
+  background-color: var(--text-warning);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Groups */
+.claude-bridge-group {
+  margin-bottom: 2px;
+}
+
+.claude-bridge-group-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.claude-bridge-group-header:hover {
+  color: var(--text-normal);
+}
+
+.claude-bridge-chevron {
+  display: flex;
+  align-items: center;
+}
+
+.claude-bridge-chevron svg {
+  width: 12px;
+  height: 12px;
+}
+
+.claude-bridge-group-body.collapsed {
+  display: none;
+}
+
+/* Command buttons */
+.claude-bridge-cmd-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  margin: 1px 0;
+  border-radius: var(--radius-s);
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 100ms ease;
+}
+
+.claude-bridge-cmd-btn:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.claude-bridge-cmd-btn.dimmed {
+  opacity: 0.5;
+}
+
+.claude-bridge-cmd-icon {
+  display: flex;
+  align-items: center;
+  color: var(--text-muted);
+}
+
+.claude-bridge-cmd-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Progress */
+.claude-bridge-progress {
+  min-height: 24px;
+  padding: 4px 8px;
+}
+
+.claude-bridge-progress-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+  animation: fadeIn 200ms ease;
+}
+
+.claude-bridge-progress-icon {
+  font-size: 12px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Divider */
+.claude-bridge-divider {
+  padding: 8px 4px 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-top: 1px solid var(--background-modifier-border);
+  margin-top: 4px;
+}
+
+/* Output pane */
+.claude-bridge-output {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  min-height: 100px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+  background-color: var(--background-secondary);
+}
+
+.claude-bridge-output:empty::before {
+  content: "Run a command to see output here";
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+/* Action bar */
+.claude-bridge-actions {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0 4px;
+  min-height: 36px;
+}
+
+.claude-bridge-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: var(--radius-s);
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 100ms ease;
+}
+
+.claude-bridge-action-btn.stop {
+  background-color: var(--background-modifier-error);
+  color: var(--text-on-accent);
+}
+
+.claude-bridge-action-btn.stop:hover {
+  opacity: 0.9;
+}
+
+.claude-bridge-action-btn.save {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.claude-bridge-action-btn.save:hover {
+  opacity: 0.9;
+}
+
+.claude-bridge-action-btn span svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Galaxy watcher notice */
+.claude-bridge-notice-file {
+  color: var(--text-accent);
+  font-style: italic;
+}
+
+.claude-bridge-notice-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.claude-bridge-notice-actions button {
+  font-size: 12px;
+  padding: 4px 12px;
+}
+
+/* Status bar widget */
+.claude-bridge-statusbar {
+  cursor: pointer;
+  padding: 0 8px;
+  font-size: 11px;
+}
+
+.claude-bridge-statusbar:hover {
+  color: var(--text-accent);
+}

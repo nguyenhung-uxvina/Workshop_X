@@ -1,0 +1,9 @@
+{
+  "id": "obsidian-claude-bridge",
+  "name": "Claude Bridge",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Run Claude Code slash commands from within Obsidian. Thin shell — all intelligence lives in Claude Code skills/hooks/rules.",
+  "author": "Workshop X",
+  "isDesktopOnly": true
+}

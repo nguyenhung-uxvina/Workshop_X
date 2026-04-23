@@ -2,10 +2,10 @@
 created: 2026-01-22
 updated: 2026-03-05
 type: project
-status: on-hold
+status: active
 deadline: null
 area: "[[2_Areas/Workshop X — Nghiên Cứu & Phân Tích Hệ Thống/_Area_Dashboard]]"
-tags: [#type/project, #status/on-hold, #topic/electronics, #topic/technology]
+tags: [#type/project, #status/active, #topic/electronics, #topic/technology]
 ---
 
 # VN-AST-MSL-001 "THANH TRI" — Platform Muc Tieu Chong Ham
@@ -15,20 +15,20 @@ tags: [#type/project, #status/on-hold, #topic/electronics, #topic/technology]
 | | |
 |--|--|
 | **Bat dau** | 2026-01-22 |
-| **Deadline** | Chua xac dinh (on-hold, cho IRONMESH priority) |
+| **Deadline** | 2026-04-04 (Phase 4 gate) |
 | **Area** | [[2_Areas/Workshop X — Nghiên Cứu & Phân Tích Hệ Thống/_Area_Dashboard]] |
-| **Trang thai** | On-hold |
+| **Trang thai** | Active — Tier 1 Prototype |
 | **Methodology** | Pahl & Beitz Systematic Design (VDI 2221/2225) |
 | **DMIR Phase** | Reverse-engineering learning exercise |
 
 ## Nhiem Vu
 
-> Thiet ke va che tao **platform muc tieu noi tren mat nuoc** de su dung trong huan luyen ten lua chong ham cua Hai quan Viet Nam. Platform phai mo phong dac tinh radar va hong ngoai cua tau chien co nho, hoat dong duoc trong dieu kien Bien Dong voi chi phi thap va kha nang che tao noi dia cao.
+> Thiet ke va che tao **platform muc tieu noi tren mat nuoc** de su dung trong huan luyen ten lua chong ham cua Hai quan Viet Nam. Platform phai mo phong dac tinh radar cua tau chien co nho, hoat dong duoc trong dieu kien Bien Dong voi chi phi thap va kha nang che tao noi dia cao.
 
 ## Tieu Chi Hoan Thanh
 
 > Du an HOAN THANH khi:
-> - Prototype hoat dong tren bien, phat hien duoc boi radar va IR seeker
+> - Prototype hoat dong tren bien, phat hien duoc boi radar
 > - Chi phi <= 200M VND (~$8,000 USD)
 > - Noi dia hoa >= 90%
 > - Thoi gian che tao <= 4 tuan
@@ -39,16 +39,16 @@ tags: [#type/project, #status/on-hold, #topic/electronics, #topic/technology]
 
 | ID | Yeu Cau | Gia Tri | Loai |
 |----|---------|---------|------|
-| RQ-SG-001 | RCS (Radar Cross Section) | >= 400 m2 (X-band) | D |
-| RQ-SG-002 | IR signature | >= 250 C (mo phong ong khoi tau) | D |
+| RQ-SG-001 | RCS (Radar Cross Section) | >= 1000 m2 (X-band) | D |
+| ~~RQ-SG-002~~ | ~~IR signature~~ | ~~REMOVED — radar-only target (2026-03-08)~~ | — |
 | RQ-PL-001 | Payload capacity | >= 1,200 kg | D |
 | RQ-ST-001 | Suc noi du tru | Safety Factor >= 2.5 | D |
 | RQ-ST-002 | On dinh (Metacentric Height) | GM > 0.5m | D |
 | RQ-OP-001 | Hoat dong | Sea State 3-4 | D |
 | RQ-SF-001 | Song sot | Sea State 5-6 (khong chim) | D |
-| RQ-EC-001 | Chi phi | <= 200M VND | D |
-| RQ-SC-001 | Thoi gian che tao | <= 4 tuan | D |
-| RQ-PR-001 | Noi dia hoa | >= 90% | D |
+| RQ-EC-001 | Chi phi | <= 2000M VND | D |
+| RQ-SC-001 | Thoi gian che tao | <= 8 tuan | D |
+| RQ-PR-001 | Noi dia hoa | >= 60% | D |
 
 ---
 
@@ -72,7 +72,6 @@ Vong HDPE 2 tang (foam-filled, D=6.0m)
   + Khung radial 6 thanh thep (tu tam ra)
   + Cot mast trung tam (H=3.0m)
   + 12 corner reflectors (RCS omnidirectional)
-  + Propane burner x2 (IR, 5kW, dual redundancy)
   + GPS beacon + SOLAS light
   + Helix anchor (central, single-point mooring)
 ```
@@ -114,7 +113,7 @@ Vong HDPE 2 tang (foam-filled, D=6.0m)
 | F3: Mang tai | San cong tac + thuong tang | Cot mast trung tam |
 | F4: Giu vi tri | Chong troi (gio + dong) | Helix anchor, single-point |
 | F5: RCS | Phan xa radar X-band | 12 trihedral corners, canh 0.5m |
-| F6: IR | Tao nguon nhiet mo phong | Propane burner 5kW x2 |
+| ~~F6: IR~~ | ~~REMOVED — radar-only target~~ | ~~(2026-03-08)~~ |
 | F7: Bao vi tri | GPS + canh bao hang hai | GPS beacon + SOLAS light |
 
 ---

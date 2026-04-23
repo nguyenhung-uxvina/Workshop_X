@@ -1,0 +1,9 @@
+supplier_id,supplier_name,category,contact_person,phone,email,address,payment_terms,lead_time_days,rating,notes
+SUP-001,Công ty TNHH Kim Loại VN,Metals,Anh Tuấn,0903-xxx-xxx,,Quận 9 HCM,COD,3,4,Nhôm 6061 + thép hộp. Giao nhanh.
+SUP-002,Thép Miền Nam,Metals,Chị Hoa,0909-xxx-xxx,,Bình Dương,30 ngày,5,3,Thép hộp giá tốt nhưng giao chậm hơn.
+SUP-003,Linh kiện Nhật Tảo,Electronics,Anh Minh,0908-xxx-xxx,,Nhật Tảo Q10 HCM,COD,1,5,ESP32 + encoder + solenoid. Tồn kho tốt.
+SUP-004,Nhatao.com,Electronics,Online,,,Online,COD/Transfer,3,4,Encoder + sensors. Giá online.
+SUP-005,Ốc vít Đại Phát,Fasteners,Anh Nam,0907-xxx-xxx,,Chợ Lớn Q5,COD,1,4,Bu-lông inox đầy đủ size.
+SUP-006,Phong Vũ,COTS,Showroom,1800-xxxx,,Online/Showroom,Transfer,2,4,Projector + màn hình + PC components.
+SUP-007,An Phát Computer,COTS,Anh Phát,0906-xxx-xxx,,Tôn Thất Tùng Q1,Transfer,3,4,GPU + workstation. Giá tốt cho SL.
+SUP-008,JLCPCB VN,PCB,Online,,,jlcpcb.com,Online,14,4,PCB custom. 14 ngày giao.

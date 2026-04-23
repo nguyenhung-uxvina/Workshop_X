@@ -1,0 +1,102 @@
+# Researcher Agent - Clawdbot Configuration
+# File: ~/researcher/config.yaml
+#
+# This is a template. Update with your actual values.
+
+# LLM Configuration
+llm:
+  provider: anthropic
+  model: claude-sonnet-4-20250514  # Cost-effective for research tasks
+  apiKey: ${ANTHROPIC_API_KEY}
+  
+# Agent Identity
+agent:
+  name: "Researcher"
+  sessionKey: "agent:researcher:main"
+  
+# Gateway Configuration  
+gateway:
+  port: 18790  # Different from Jarvis (18789)
+  host: "127.0.0.1"  # Localhost only, secure
+  
+# Telegram Interface
+interfaces:
+  telegram:
+    enabled: true
+    token: ${RESEARCHER_TELEGRAM_BOT_TOKEN}  # Create separate bot via @BotFather
+    allowedUsers:
+      - YOUR_TELEGRAM_USER_ID  # Same as Jarvis - your ID
+    # Optional: Restrict to specific chat
+    # allowedChats:
+    #   - MISSION_CONTROL_GROUP_ID
+
+# Memory Configuration
+memory:
+  enabled: true
+  provider: local
+  path: "./memory"
+  
+# MCP Servers (Tools)
+mcpServers:
+  # Airtable - for Mission Control
+  airtable:
+    command: "npx"
+    args: ["-y", "@modelcontextprotocol/server-airtable"]
+    env:
+      AIRTABLE_API_KEY: ${AIRTABLE_API_KEY}
+      
+  # File System - for local work
+  filesystem:
+    command: "npx"
+    args: ["-y", "@anthropics/mcp-server-filesystem", "/home/clawdbot/researcher", "/home/clawdbot/shared"]
+    
+  # Web Search - for research
+  brave-search:
+    command: "npx"
+    args: ["-y", "@anthropics/mcp-server-brave-search"]
+    env:
+      BRAVE_API_KEY: ${BRAVE_API_KEY}
+      
+  # Sequential Thinking - for complex research
+  sequential-thinking:
+    command: "npx"
+    args: ["-y", "@anthropics/mcp-server-sequential-thinking"]
+
+# System Prompt (loads SOUL.md and AGENTS.md)
+systemPrompt:
+  files:
+    - "./SOUL.md"
+    - "../AGENTS.md"
+  additionalContext: |
+    Current date: {{date}}
+    Time zone: Asia/Ho_Chi_Minh (UTC+7)
+    
+    On startup, always:
+    1. Read memory/WORKING.md to restore context
+    2. Check Airtable for assigned tasks
+    3. If tasks exist, work on them
+    4. If no tasks, report HEARTBEAT_OK
+    
+# Cron Jobs (Heartbeat)
+cron:
+  jobs:
+    - name: "researcher-heartbeat"
+      schedule: "2,17,32,47 * * * *"  # Every 15 min, offset by 2 min from Jarvis
+      message: |
+        HEARTBEAT CHECK
+        
+        1. Read memory/WORKING.md
+        2. Check Airtable "Tasks" table for tasks assigned to "Researcher"
+        3. Check Airtable "Messages" for @Researcher mentions
+        4. If work exists, do it and update status
+        5. If no work, log HEARTBEAT_OK silently
+        
+        Begin.
+      session: "isolated"  # One-shot, don't persist
+      
+# Logging
+logging:
+  level: info
+  file: "./logs/researcher.log"
+  maxSize: "10m"
+  maxFiles: 5

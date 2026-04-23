@@ -1,0 +1,6 @@
+customer_id,customer_name,type,contact_person,phone,products_purchased,total_units,relationship_status,last_contact,next_action,notes
+CUS-001,Hải đoàn 128 (HD128),Military,Đại tá [name],,,Towed Target; VN-MGM,100+,Active,2026-04-10,Demo VN-CUAV-SIM-001 post-PoC,Key customer — Hải quân
+CUS-002,Vùng 4 Hải quân,Military,,,,VN-MGM; Naval Sim,50+,Active,2026-03-xx,,Multiple product lines
+CUS-003,Học viện Hải quân,Military,,,,Naval Sim (Vega Prime),2 systems,Active,,,Training systems
+CUS-004,Quân khu 7,Military,,,,Towed Target,100+,Active,,,Volume buyer
+CUS-005,Quân chủng PK-KQ,Military,,,,Target Drone,100+,Active,,,Air defense training

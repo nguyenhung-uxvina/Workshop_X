@@ -1,0 +1,758 @@
+{
+  "swarm_id": "swarm-20260206-1220",
+  "created_at": "2026-02-06T12:20:53.274726+07:00",
+  "mission": {
+    "objective": "Compare piezoelectric vs MEMS microphone candidates for BB-01 LOMAH 140dB SPL requirement",
+    "success_criteria": [
+      "Complete all assigned tasks",
+      "Pass shadow review"
+    ],
+    "deadline": "2026-02-06T13:50:53.274726+07:00",
+    "priority": "HIGH"
+  },
+  "agents": {
+    "lead": {
+      "id": "lead-01",
+      "status": "complete",
+      "last_heartbeat": "2026-02-06T13:40:00.000000+07:00",
+      "current_action": "session_closed",
+      "message_queue_depth": 0,
+      "tasks_assigned": 4,
+      "tasks_verified": 4
+    },
+    "workers": [
+      {
+        "id": "worker-01",
+        "role": "researcher",
+        "specialization": "Find, extract, and organize technical information",
+        "mcp_tools": [
+          "web_search",
+          "filesystem"
+        ],
+        "status": "idle",
+        "last_heartbeat": "2026-02-06T13:05:00.000000+07:00",
+        "current_task": null,
+        "progress_pct": 0,
+        "blockers": [],
+        "outputs": [
+          "outputs/sensor-candidates-specs.md",
+          "outputs/bb01-lomah-constraints.md"
+        ]
+      },
+      {
+        "id": "worker-02",
+        "role": "analyst",
+        "specialization": "Evaluate, score, and recommend based on criteria",
+        "mcp_tools": [
+          "filesystem",
+          "airtable"
+        ],
+        "status": "idle",
+        "last_heartbeat": "2026-02-06T13:25:00.000000+07:00",
+        "current_task": null,
+        "progress_pct": 0,
+        "blockers": [],
+        "outputs": [
+          "outputs/evaluation-matrix-template.md",
+          "outputs/mic-selection-recommendation.md"
+        ]
+      }
+    ],
+    "shadow": {
+      "id": "shadow-01",
+      "status": "watching",
+      "last_heartbeat": "2026-02-06T13:35:00.000000+07:00",
+      "reviews_pending": [],
+      "reviews_completed": ["task-001", "task-002", "task-003", "task-004"],
+      "issues_found": 4
+    }
+  },
+  "task_board": {
+    "backlog": [],
+    "in_progress": [],
+    "review": [],
+    "done": [
+      {
+        "task_id": "task-001",
+        "title": "Research microphone candidates for 140dB SPL LOMAH application",
+        "assigned_worker": "worker-01",
+        "status": "done",
+        "completed_at": "2026-02-06T12:45:00.000000+07:00",
+        "verified_at": "2026-02-06T13:38:00.000000+07:00",
+        "shadow_verdict": "PASS_WITH_NOTES"
+      },
+      {
+        "task_id": "task-002",
+        "title": "Define weighted evaluation matrix for BB-01 LOMAH mic selection",
+        "assigned_worker": "worker-02",
+        "status": "done",
+        "completed_at": "2026-02-06T12:48:00.000000+07:00",
+        "verified_at": "2026-02-06T13:38:00.000000+07:00",
+        "shadow_verdict": "PASS"
+      },
+      {
+        "task_id": "task-003",
+        "title": "Research BB-01 LOMAH system constraints and integration requirements",
+        "assigned_worker": "worker-01",
+        "status": "done",
+        "completed_at": "2026-02-06T13:05:00.000000+07:00",
+        "verified_at": "2026-02-06T13:38:00.000000+07:00",
+        "shadow_verdict": "PASS_WITH_NOTES"
+      },
+      {
+        "task_id": "task-004",
+        "title": "Score candidates and produce final recommendation",
+        "assigned_worker": "worker-02",
+        "status": "done",
+        "completed_at": "2026-02-06T13:25:00.000000+07:00",
+        "verified_at": "2026-02-06T13:38:00.000000+07:00",
+        "shadow_verdict": "PASS_WITH_NOTES"
+      }
+    ]
+  },
+  "message_log": [
+    {
+      "timestamp": "2026-02-06T12:20:53.274726+07:00",
+      "from": "system",
+      "to": "all",
+      "type": "STATUS",
+      "content": "Swarm swarm-20260206-1220 initialized. Mission: Compare piezoelectric vs MEMS microphone candidates for BB-01 LOMAH 140dB SPL requirement. 2 workers + 1 lead + 1 shadow.",
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:22:00.000000+07:00",
+      "from": "lead-01",
+      "to": "all",
+      "type": "STATUS",
+      "content": "Mission decomposed into 4 tasks. Tasks 001-003 are parallel-safe (no dependencies). Task 004 depends on 001+002+003. worker-01 (researcher): task-001 then task-003. worker-02 (analyst): task-002 then task-004. Estimated total: ~55 min per worker (well within 90-min deadline).",
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:22:00.000000+07:00",
+      "from": "lead-01",
+      "to": "worker-01",
+      "type": "STATUS",
+      "content": "ASSIGNMENT: Start with task-001 (research mic candidates, 30 min). When complete, HANDOFF to shadow-01, then pick up task-003 (BB-01 system constraints, 25 min). Output format: structured comparison tables with datasheet citations. Save artifacts to outputs/ directory.",
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:22:00.000000+07:00",
+      "from": "lead-01",
+      "to": "worker-02",
+      "type": "STATUS",
+      "content": "ASSIGNMENT: Start with task-002 (evaluation matrix, 20 min). When complete, HANDOFF to shadow-01, then wait for task-001 and task-003 data from worker-01 before starting task-004 (scoring + recommendation, 30 min). Use VDI 2225 methodology. Save artifacts to outputs/ directory.",
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:25:00.000000+07:00",
+      "from": "worker-01",
+      "to": "log",
+      "type": "STATUS",
+      "content": "task-001 started. Searching piezoelectric ICP microphones rated >=140 dB SPL. Targeting PCB Piezotronics, GRAS, Endevco product lines.",
+      "progress_pct": 10,
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:30:00.000000+07:00",
+      "from": "worker-01",
+      "to": "log",
+      "type": "STATUS",
+      "content": "Piezo candidates identified: PCB 377C01 (166 dB, 80 kHz), GRAS 46BE (160 dB, 80 kHz), Endevco 2510 (>180 dB, 10 kHz), PCB 378A06 (150-160 dB, 40 kHz). Now searching MEMS candidates.",
+      "progress_pct": 40,
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:35:00.000000+07:00",
+      "from": "worker-01",
+      "to": "log",
+      "type": "STATUS",
+      "content": "MEMS candidates identified: Vesper VM2020 (152 dB AOP, piezo MEMS), sensiBel SBM100B (146 dB AOP, optical MEMS), TDK ICS-40638 (138 dB AOP — 2 dB below req, included as reference). FYI worker-02: frequency response varies widely (10 kHz to 80 kHz) — this should be weighted heavily in evaluation matrix.",
+      "progress_pct": 70,
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:40:00.000000+07:00",
+      "from": "worker-01",
+      "to": "log",
+      "type": "STATUS",
+      "content": "Populating full spec table (12 parameters × 7 candidates). Verifying all values against datasheets. Drafting key observations for analyst.",
+      "progress_pct": 90,
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:45:00.000000+07:00",
+      "from": "worker-01",
+      "to": "shadow-01",
+      "type": "HANDOFF",
+      "content": "Sensor comparison research complete. Handing off to shadow for review.",
+      "task_id": "task-001",
+      "work_completed": "Extracted specs for 4 piezoelectric and 3 MEMS microphone candidates. All piezo candidates meet 140 dB SPL. 2 of 3 MEMS candidates meet requirement (VM2020 at 152 dB, SBM100B at 146 dB). ICS-40638 at 138 dB included as closest capacitive MEMS reference.",
+      "key_outputs": [
+        "Comparison table: 7 sensors × 12 parameters (max SPL, sensitivity, freq range, dynamic range, SNR, power, dimensions, weight, temp range, cost, availability, meets requirement)",
+        "4 piezo candidates: PCB 377C01 (166 dB), GRAS 46BE (160 dB), Endevco 2510 (>180 dB), PCB 378A06 (150-160 dB)",
+        "3 MEMS candidates: Vesper VM2020 (152 dB), sensiBel SBM100B (146 dB), TDK ICS-40638 (138 dB)",
+        "6 key observations for analyst covering frequency response, cost (100-1000× spread), form factor, power, SPL margin, and supply chain risk"
+      ],
+      "artifacts": [
+        {"type": "table", "location": "outputs/sensor-candidates-specs.md"}
+      ],
+      "completion_evidence": [
+        "All 7 candidate specs sourced from manufacturer datasheets or verified distributor pages",
+        "12 spec parameters populated per candidate (some TBC for sensiBel SBM100B — product is pre-production)",
+        "Max SPL values verified against datasheet 3% or 10% THD limits",
+        "Cost data from DigiKey/Mouser/Chipmall for MEMS; estimate ranges for piezo (quote-based)",
+        "Summary comparison table included for quick cross-reference"
+      ],
+      "next_action": "Shadow agent verifies: (1) all specs sourced from datasheets, (2) 140 dB requirement correctly assessed per candidate, (3) no major candidates missed, (4) cost estimates reasonable",
+      "warnings": [
+        "sensiBel SBM100B has several TBC specs — product launched 2025, eval kits Dec 2025, full production 2026",
+        "TDK ICS-40638 is 2 dB below 140 dB requirement — flagged with warning symbol in table",
+        "Endevco 2510 frequency response limited to 10 kHz — may be insufficient for supersonic crack detection",
+        "Piezo measurement mic costs are estimates requiring formal quotes from PCB/GRAS/Endevco",
+        "Vesper VM2020 upper frequency is 10 kHz — same limitation as Endevco 2510"
+      ],
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:28:00.000000+07:00",
+      "from": "worker-02",
+      "to": "log",
+      "type": "STATUS",
+      "content": "task-002 started. Researching VDI 2225 methodology (0-4 scale, weighted utility value). Studying supersonic bullet N-wave frequency spectrum to inform bandwidth weighting.",
+      "progress_pct": 15,
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:35:00.000000+07:00",
+      "from": "worker-02",
+      "to": "log",
+      "type": "STATUS",
+      "content": "Acknowledged worker-01 FYI on frequency response spread (10-80 kHz). Confirmed: supersonic bullet N-wave primary energy 3-7 kHz, but shock front rise time contains >20 kHz content critical for TDOA. Weighting C2 (frequency BW) at 13% — highest single criterion.",
+      "progress_pct": 50,
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:42:00.000000+07:00",
+      "from": "worker-02",
+      "to": "log",
+      "type": "STATUS",
+      "content": "13 criteria defined across 5 categories. Weights sum to 100%. Scoring guidelines drafted per criterion (0-4 with concrete thresholds). Blank scoring template includes all 7 candidates from worker-01. Writing artifact.",
+      "progress_pct": 85,
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:48:00.000000+07:00",
+      "from": "worker-02",
+      "to": "shadow-01",
+      "type": "HANDOFF",
+      "content": "Evaluation matrix complete. Handing off to shadow for review.",
+      "task_id": "task-002",
+      "work_completed": "Built VDI 2225 weighted evaluation matrix with 13 criteria across 5 categories. Weights assigned with documented rationale. Scoring guidelines defined for each criterion with concrete thresholds mapped to the 0-4 scale. Blank scoring template pre-populated with all 7 candidate columns from task-001.",
+      "key_outputs": [
+        "VDI 2225 methodology section (scoring scale 0-4, TUV formula, elimination rule for C1/C2)",
+        "13 weighted criteria: Acoustic Performance 35%, Environmental 15%, Signal Chain 15%, Physical 10%, Programmatic 25%",
+        "Detailed scoring guidelines per criterion with specific dB/Hz/°C/$ thresholds",
+        "Blank scoring template ready for task-004 population",
+        "Decision thresholds: TUV ≥0.80 strong, 0.60-0.79 acceptable, <0.60 reject"
+      ],
+      "artifacts": [
+        {"type": "matrix", "location": "outputs/evaluation-matrix-template.md"}
+      ],
+      "completion_evidence": [
+        "13 criteria exceed minimum 8 requirement",
+        "All 5 categories covered (acoustic, environmental, signal chain, physical, programmatic)",
+        "Weights verified to sum to 100% (35+15+15+10+25)",
+        "Each weight includes documented rationale tied to LOMAH application requirements",
+        "Scoring guidelines reference concrete specs from worker-01 candidate data",
+        "Frequency response (C2) given highest individual weight (13%) per worker-01's flag and N-wave spectrum research"
+      ],
+      "next_action": "Shadow agent verifies: (1) weights are justified and sum to 100%, (2) scoring guidelines are consistent and unambiguous, (3) no missing criteria for LOMAH application, (4) elimination rules are appropriate",
+      "warnings": [
+        "C2 (frequency BW) scoring may need adjustment if BB-01 uses time-domain threshold detection rather than frequency-domain processing — would reduce bandwidth importance",
+        "C11 (unit cost) thresholds assume multi-target deployment (60-80 sensors); single-prototype evaluation would shift these ranges",
+        "Environmental robustness (C5) scoring is qualitative — no IP ratings available for most MEMS candidates, relies on enclosure-level protection"
+      ],
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:50:00.000000+07:00",
+      "from": "worker-01",
+      "to": "log",
+      "type": "STATUS",
+      "content": "task-003 started. Researching comparable LOMAH system specs (Steinert TrueZeroTarget, Oakwood H-Bar, BEL India, Zen Technologies) for BB-01 constraint derivation.",
+      "progress_pct": 10,
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:55:00.000000+07:00",
+      "from": "worker-01",
+      "to": "log",
+      "type": "STATUS",
+      "content": "Key reference found: Steinert TrueZeroTarget datasheet — IP66, -30 to +70°C, LiFePO4 3.2V/12Ah battery, 600mm sensor spacing, ±3mm accuracy, Wi-Fi comms, 4.0 kg. Using as primary reference for BB-01 constraints derivation.",
+      "progress_pct": 40,
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T12:58:00.000000+07:00",
+      "from": "worker-01",
+      "to": "log",
+      "type": "STATUS",
+      "content": "Acoustic environment quantified: 5.56mm = 148-151 dB(C) at sensor, 7.62mm est. 153-158 dB, 12.7mm est. 160-170 dB. N-wave overpressure decays as r^(-3/4). Calculated TDOA sample rate: ≥200 kHz minimum for ±5mm accuracy (14.5 µs timing resolution). FYI worker-02: constraints doc confirms ≥20 kHz sensor bandwidth is a MUST, ≥50 kHz is SHOULD.",
+      "progress_pct": 70,
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T13:02:00.000000+07:00",
+      "from": "worker-01",
+      "to": "log",
+      "type": "STATUS",
+      "content": "Vietnam environmental conditions documented: 5-44°C ambient, 84% avg humidity, IP66 required. Sensor supply: 3.3/5.0V from 12V rail, <5mA/sensor for battery life. Compiling derived design constraints summary table.",
+      "progress_pct": 90,
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T13:05:00.000000+07:00",
+      "from": "worker-01",
+      "to": "shadow-01",
+      "type": "HANDOFF",
+      "content": "BB-01 LOMAH system constraints research complete. Handing off to shadow for review.",
+      "task_id": "task-003",
+      "work_completed": "Compiled comprehensive BB-01 LOMAH system constraints document covering all 5 required categories. Constraints derived from 6 comparable LOMAH systems (Steinert, Oakwood, BEL, Zen, Theissen) and published acoustic/ballistic literature. Each constraint source is explicitly tagged.",
+      "key_outputs": [
+        "Acoustic environment: SPL by caliber (5.56mm=148-151dB, 7.62mm=153-158dB, 12.7mm=160-170dB), N-wave spectrum (3-7kHz primary, >20kHz for TDOA), background noise profile",
+        "Environmental: -10 to +70°C operating, IP66, 84% avg humidity, vibration/shock from bullet impacts",
+        "Physical: 4-6 sensors/target, 600mm spacing, <30×30×30mm per sensor, <20g per sensor",
+        "Electrical: 3.3/5.0V supply, <5mA/sensor, ≥200kHz ADC sample rate, simultaneous sampling required",
+        "Operational: 440 m/s min velocity, ±5mm accuracy, 100ms between shots, 10+ year service life",
+        "Derived design constraints summary table with 15 quantified requirements (MUST/SHOULD priority)"
+      ],
+      "artifacts": [
+        {"type": "document", "location": "outputs/bb01-lomah-constraints.md"}
+      ],
+      "completion_evidence": [
+        "All 5 categories covered with quantified values",
+        "Max SPL: 140-170 dB by caliber (quantified per Southampton SA80 study + extrapolation)",
+        "Temp range: -10 to +70°C (derived from Vietnam climate + solar heat soak + Steinert reference)",
+        "Supply voltage: 3.3V or 5.0V from 12V rail (derived from Steinert/Oakwood battery specs)",
+        "Sample rate: ≥200 kHz (calculated from ±5mm / 346 m/s = 14.5µs timing resolution)",
+        "6 comparable systems referenced, each tagged with [Steinert], [Oakwood], [BEL], [Zen], [Theissen], [Lit.]"
+      ],
+      "next_action": "Shadow agent verifies: (1) constraints are internally consistent, (2) comparable system references are correctly attributed, (3) derived values are reasonable engineering estimates, (4) no critical constraints missing",
+      "warnings": [
+        "12.7mm and larger caliber SPL values are extrapolated — no direct measurement data found in literature",
+        "Sensor volume constraint (30×30×30mm) is an engineering estimate — BB-01 target frame dimensions not confirmed",
+        "ADC sample rate calculation assumes threshold-crossing TDOA without sub-sample interpolation; with interpolation, 200 kHz is sufficient",
+        "IP66 requirement is sensor-system level — individual MEMS sensors can be protected at enclosure level"
+      ],
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T13:10:00.000000+07:00",
+      "from": "worker-02",
+      "to": "log",
+      "type": "STATUS",
+      "content": "task-004 started. Reading all 3 input artifacts (sensor-candidates-specs.md, evaluation-matrix-template.md, bb01-lomah-constraints.md). Preparing to score 7 candidates across 13 criteria.",
+      "progress_pct": 10,
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T13:15:00.000000+07:00",
+      "from": "worker-02",
+      "to": "log",
+      "type": "STATUS",
+      "content": "Scoring in progress. Piezo candidates scored: 377C01 leads with strong acoustic performance (C1=4, C2=4) but high cost (C11=2). 46BE similar profile. Endevco 2510 penalized for narrow bandwidth (C2=1). Now scoring MEMS candidates.",
+      "progress_pct": 50,
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T13:20:00.000000+07:00",
+      "from": "worker-02",
+      "to": "log",
+      "type": "STATUS",
+      "content": "All 7 candidates scored. TUV computed. Key finding: ICS-40638 has highest TUV (0.740) but fails C1 elimination rule (AOP 138 dB < 140 dB requirement). After elimination, PCB 377C01 leads (0.730), followed by VM2020 (0.678). Drafting dual-path recommendation: VM2020 for production, 377C01 for validation.",
+      "progress_pct": 85,
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T13:25:00.000000+07:00",
+      "from": "worker-02",
+      "to": "shadow-01",
+      "type": "HANDOFF",
+      "content": "Final microphone selection recommendation complete. Handing off to shadow for review.",
+      "task_id": "task-004",
+      "work_completed": "Scored all 7 microphone candidates across 13 VDI 2225 weighted criteria using data from task-001 (specs), task-002 (matrix), and task-003 (constraints). Computed weighted totals, TUV values, and applied elimination rules. Produced ranked recommendation with dual-path strategy, risk register (5 risks), and 2-phase validation test plan.",
+      "key_outputs": [
+        "Completed VDI 2225 scoring matrix: 7 candidates × 13 criteria with per-score justifications",
+        "TUV rankings: ICS-40638 0.740 (eliminated — fails 140 dB), 377C01 0.730 (#1 eligible), VM2020 0.678, 46BE 0.653, 378A06 0.643, 2510 0.588 (reject), SBM100B 0.553 (reject)",
+        "Primary recommendation: Dual-path — Vesper VM2020 ($4/unit, 152 dB AOP) for production + PCB 377C01 ($500, 80 kHz) for validation/benchmarking",
+        "Runner-up: TDK ICS-40638 conditional on field testing confirming SPL < 138 dB at sensor position",
+        "Risk register: 5 risks (bandwidth gap, supply chain, SNR/false triggers, 12.7mm clipping, enclosure attenuation)",
+        "Validation test plan: Phase 1 bench (speaker + SPL meter), Phase 2 field trial (live fire range)"
+      ],
+      "artifacts": [
+        {"type": "report", "location": "outputs/mic-selection-recommendation.md"}
+      ],
+      "completion_evidence": [
+        "All 7 candidates scored across all 13 criteria (91 individual scores with justifications)",
+        "TUV formula correctly applied: Weighted Total / 400",
+        "ICS-40638 scored 1 on C1 (Max SPL: 138 dB, marginal) — not eliminated by matrix rule (C1=0 trigger) but fails system-level 140 dB MUST requirement from task-003",
+        "#1 recommendation (dual-path VM2020 + 377C01) with clear rationale",
+        "#2 runner-up (ICS-40638 conditional) identified",
+        "Risk register contains 5 risks with likelihood/impact/mitigation",
+        "Validation test plan covers both bench and field phases",
+        "5 open questions for next design gate documented"
+      ],
+      "next_action": "Shadow agent verifies: (1) all scores are consistent with scoring guidelines from task-002, (2) TUV calculations are mathematically correct, (3) elimination rules properly applied, (4) recommendation logic follows from scores, (5) risk register is complete",
+      "warnings": [
+        "VM2020 bandwidth limited to 10 kHz — risk R1 is the primary technical concern for ±5 mm TDOA accuracy",
+        "VM2020 is single-source (Vesper) — supply chain risk R2 applies",
+        "sensiBel SBM100B scored conservatively due to TBC specs — may improve when full datasheet available",
+        "Cost estimates for piezo candidates are quote-based ranges — actual pricing may shift ±30%",
+        "Enclosure acoustic attenuation (risk R5) not yet quantified — could affect all candidates equally"
+      ],
+      "requires_response": false
+    }
+    ,
+    {
+      "timestamp": "2026-02-06T13:28:00.000000+07:00",
+      "from": "shadow-01",
+      "to": "lead-01",
+      "type": "STATUS",
+      "content": "Starting review of all 4 tasks. Reviewing artifacts, verifying completion evidence, cross-checking consistency across outputs, and validating TUV calculations.",
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T13:30:00.000000+07:00",
+      "from": "shadow-01",
+      "to": "lead-01",
+      "type": "HANDOFF",
+      "content": "Review complete for task-001.",
+      "task_id": "task-001",
+      "review": {
+        "review_id": "rev-20260206-1330",
+        "task_id": "task-001",
+        "worker_id": "worker-01",
+        "verdict": "PASS_WITH_NOTES",
+        "checks": {
+          "evidence": {
+            "pass": true,
+            "notes": "Artifact exists at outputs/sensor-candidates-specs.md. All 7 candidates documented with sourced datasheet URLs. SPL values verified against claimed sources. 12 parameters per candidate populated."
+          },
+          "completeness": {
+            "pass": true,
+            "notes": "Success criteria met: 4 piezo + 3 MEMS candidates (exceeds 3+3 minimum). Full comparison table provided. Key observations section addresses analyst needs. No TODO/placeholder stubs."
+          },
+          "consistency": {
+            "pass": true,
+            "notes": "Spec values used in task-004 scoring match task-001 source data. Caliber references align with task-003 constraints. Frequency range claims consistent across context and summary table."
+          },
+          "specificity": {
+            "pass": true,
+            "notes": "Real part numbers, real datasheet URLs, specific numerical values. Cost data sourced from distributor pages (DigiKey, Chipmall) for MEMS; estimate ranges noted for quote-based piezo pricing."
+          }
+        },
+        "issues_found": [
+          {
+            "severity": "minor",
+            "description": "sensiBel SBM100B has 5 TBC parameters (temperature, power voltage, current, dimensions, cost). Pre-production status limits evaluation confidence.",
+            "location": "outputs/sensor-candidates-specs.md, MEMS-2 section",
+            "fix_required": "No fix needed — worker correctly flagged TBC fields and pre-production status. Task-004 analyst scored conservatively as appropriate."
+          }
+        ],
+        "recommendation": "Accept"
+      },
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T13:31:00.000000+07:00",
+      "from": "shadow-01",
+      "to": "lead-01",
+      "type": "HANDOFF",
+      "content": "Review complete for task-002.",
+      "task_id": "task-002",
+      "review": {
+        "review_id": "rev-20260206-1331",
+        "task_id": "task-002",
+        "worker_id": "worker-02",
+        "verdict": "PASS",
+        "checks": {
+          "evidence": {
+            "pass": true,
+            "notes": "Artifact exists at outputs/evaluation-matrix-template.md. 13 criteria defined across 5 categories. Weights verified: 35+15+15+10+25 = 100%. VDI 2225 methodology correctly described with 0-4 scale and TUV formula."
+          },
+          "completeness": {
+            "pass": true,
+            "notes": "All success criteria met: methodology documented, weighted criteria with rationale, scoring guidelines with concrete thresholds per criterion, blank template with all 7 candidate columns, elimination rules defined, decision thresholds specified."
+          },
+          "consistency": {
+            "pass": true,
+            "notes": "Criteria thresholds reference LOMAH-relevant parameters from task-003 (temperature, SPL, frequency). C2 weighting at 13% is justified by worker-01's STATUS message flagging frequency as critical differentiator and N-wave spectrum research. Candidate columns match task-001 output."
+          },
+          "specificity": {
+            "pass": true,
+            "notes": "Each criterion has concrete scoring thresholds (e.g., C1: 135/140/150/165 dB boundaries; C4: specific temperature ranges; C11: specific cost brackets). Weight rationale ties to LOMAH application requirements, not generic engineering. VDI 2225 standard properly referenced."
+          }
+        },
+        "issues_found": [],
+        "recommendation": "Accept"
+      },
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T13:32:00.000000+07:00",
+      "from": "shadow-01",
+      "to": "lead-01",
+      "type": "HANDOFF",
+      "content": "Review complete for task-003.",
+      "task_id": "task-003",
+      "review": {
+        "review_id": "rev-20260206-1332",
+        "task_id": "task-003",
+        "worker_id": "worker-01",
+        "verdict": "PASS_WITH_NOTES",
+        "checks": {
+          "evidence": {
+            "pass": true,
+            "notes": "Artifact exists at outputs/bb01-lomah-constraints.md. 6 comparable systems referenced with tagged sources. 15 derived constraints in summary table. All 5 required categories covered."
+          },
+          "completeness": {
+            "pass": true,
+            "notes": "All success criteria met: acoustic environment quantified by caliber, environmental conditions for Vietnam, physical/electrical integration requirements, operational requirements. MUST/SHOULD priority classification applied. ADC sample rate calculation shown (14.5 µs from ±5mm/346 m/s)."
+          },
+          "consistency": {
+            "pass": true,
+            "notes": "Temperature requirement (−10 to +70 °C) consistent with task-002 C4 scoring guideline. 140 dB SPL requirement consistent with task-001 candidate assessment. Sensor spacing (600 mm) and count (4-6) consistent with task-002 physical integration criteria."
+          },
+          "specificity": {
+            "pass": true,
+            "notes": "Real system references (Steinert TrueZeroTarget specs verified against public datasheet). Academic references cited with URLs (Southampton SA80 study, HAL Marchiano paper, Maher IEEE DSP 2006). SPL values by caliber derived from published data with stated methodology."
+          }
+        },
+        "issues_found": [
+          {
+            "severity": "minor",
+            "description": "12.7 mm and larger caliber SPL estimates (160-170 dB) are extrapolated, not measured. No direct measurement source cited.",
+            "location": "outputs/bb01-lomah-constraints.md, §1.1 table row for 12.7×99 mm",
+            "fix_required": "No fix needed — worker explicitly marked as '[Lit.] Extrapolation' and flagged in HANDOFF warnings. Acceptable for design constraints derivation; field measurement recommended in task-004 validation plan."
+          },
+          {
+            "severity": "minor",
+            "description": "Sensor volume constraint (30×30×30 mm) is an engineering estimate — BB-01 target frame dimensions not confirmed.",
+            "location": "outputs/bb01-lomah-constraints.md, §3.2",
+            "fix_required": "No fix needed — derived from comparable system housing dimensions (Steinert 700×120×106 mm). Flagged as 'Engineering estimate' in source column."
+          }
+        ],
+        "recommendation": "Accept"
+      },
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T13:35:00.000000+07:00",
+      "from": "shadow-01",
+      "to": "lead-01",
+      "type": "HANDOFF",
+      "content": "Review complete for task-004. All TUV calculations independently verified. Recommendation logic is sound.",
+      "task_id": "task-004",
+      "review": {
+        "review_id": "rev-20260206-1335",
+        "task_id": "task-004",
+        "worker_id": "worker-02",
+        "verdict": "PASS_WITH_NOTES",
+        "checks": {
+          "evidence": {
+            "pass": true,
+            "notes": "Artifact exists at outputs/mic-selection-recommendation.md. 7×13 scoring matrix fully populated (91 individual scores). Per-score justification tables provided for all 7 candidates. TUV formula applied correctly. All 7 weighted totals and TUV values independently verified by shadow (arithmetic confirmed)."
+          },
+          "completeness": {
+            "pass": true,
+            "notes": "All 6 success criteria met: (1) all candidates scored ✓, (2) each score justified with 1-2 sentence rationale ✓, (3) clear #1 (VM2020 production + 377C01 validation) and #2 (ICS-40638 conditional) ✓, (4) risk register with 5 risks (exceeds minimum 3) ✓, (5) validation test plan with Phase 1 bench + Phase 2 field ✓, (6) saved to outputs/mic-selection-recommendation.md ✓."
+          },
+          "consistency": {
+            "pass": true,
+            "notes": "Scores align with task-002 scoring guidelines (spot-checked: C1 thresholds match, C4 temperature brackets match, C11 cost brackets match). Spec values in justifications match task-001 candidate data. System constraints from task-003 correctly inform scoring (e.g., IP66 requirement → C5 scores, −10 to +70°C → C4 scores). Key decisions in shared_context (3+3 candidates, task parallelization) honored."
+          },
+          "specificity": {
+            "pass": true,
+            "notes": "Justifications reference specific spec values (e.g., '166 dB max SPL — 26 dB headroom', '$4.18 at 1k qty — 80 sensors = $334'). Risk register includes likelihood/impact/mitigation columns. Validation test plan specifies equipment, pass criteria, and scope. Open questions are actionable and decision-forcing."
+          }
+        },
+        "issues_found": [
+          {
+            "severity": "minor",
+            "description": "ICS-40638 scored C1=1 (per matrix: 135-139 dB = 'marginal'), which does NOT trigger the task-002 elimination rule (C1=0 only). However, the report labels it as 'fails 140 dB MUST requirement' — this is a system-level gate from task-003, not the matrix elimination rule. The distinction is correct but could be made more explicit to avoid confusion between the two different disqualification mechanisms.",
+            "location": "outputs/mic-selection-recommendation.md, §1.3 TUV Rankings table, ICS-40638 row",
+            "fix_required": "No fix required — the analyst correctly applied both mechanisms: (1) matrix elimination rule (C1≥1, so not eliminated) and (2) system MUST requirement (140 dB per task-003, fails). The report's treatment is substantively correct. A clarifying footnote would improve transparency but is not blocking."
+          }
+        ],
+        "recommendation": "Accept"
+      },
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T13:38:00.000000+07:00",
+      "from": "lead-01",
+      "to": "all",
+      "type": "STATUS",
+      "content": "LEAD VERIFICATION COMPLETE. Shadow-01 reviewed all 4 tasks: 1 PASS, 3 PASS_WITH_NOTES. 3 minor issues found — all informational, no fixes required. All 4 shadow recommendations: Accept. Lead concurs. All tasks moved to DONE. Mission success criteria met: (1) all assigned tasks complete ✓, (2) all tasks passed shadow review ✓. Swarm session closing.",
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T13:40:00.000000+07:00",
+      "from": "lead-01",
+      "to": "all",
+      "type": "STATUS",
+      "content": "SESSION CLOSED. Swarm swarm-20260206-1220 complete. Duration: 80 minutes (within 90-min deadline). 4/4 tasks done. 4 artifacts produced. 0 critical issues. Trajectory document generated at outputs/trajectory-swarm-20260206-1220.md.",
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T13:42:00.000000+07:00",
+      "from": "shadow-01",
+      "to": "lead-01",
+      "type": "HANDOFF",
+      "content": "Post-session review of trajectory document complete.",
+      "task_id": "trajectory",
+      "review": {
+        "review_id": "rev-20260206-1342",
+        "task_id": "trajectory",
+        "worker_id": "lead-01",
+        "verdict": "PASS_WITH_NOTES",
+        "checks": {
+          "evidence": {
+            "pass": true,
+            "notes": "Trajectory file exists at outputs/trajectory-swarm-20260206-1220.md. All 12 timeline entries verified against message_log timestamps — all match within ±2 minutes (rounded to session-relative minutes). All 4 artifact file paths confirmed in shared_context.artifacts_created. TUV values (0.678, 0.730, 0.740) match task-004 artifact exactly."
+          },
+          "completeness": {
+            "pass": true,
+            "notes": "Trajectory covers all required elements per lead-agent.md lifecycle: agents, task flow, artifacts, key decision, shadow review summary, coordination metrics, lessons learned, and open actions. 8 well-structured sections. Open actions are actionable and forward-looking."
+          },
+          "consistency": {
+            "pass": false,
+            "notes": "Three data inconsistencies found (see issues_found). None are critical — all are minor numerical errors that do not affect the trajectory's conclusions or recommendations."
+          },
+          "specificity": {
+            "pass": true,
+            "notes": "Timeline uses concrete minute-markers derived from actual timestamps. Metrics are quantified with targets and status. Lessons learned are specific to this session (not generic advice). Open actions include specific vendor names and part numbers."
+          }
+        },
+        "issues_found": [
+          {
+            "severity": "minor",
+            "description": "Issue count mismatch: §5 Quality Metrics states '3 minor issues' but actual count across shadow reviews is 4 (task-001: 1, task-002: 0, task-003: 2, task-004: 1). The shadow state counter was set to 3 during the review pass, and the trajectory inherited this error.",
+            "location": "outputs/trajectory-swarm-20260206-1220.md, line 87",
+            "fix_required": "Change '3 minor issues' to '4 minor issues'. Shadow state counter corrected to 4."
+          },
+          {
+            "severity": "minor",
+            "description": "Worker utilization overstated: §1 Agents table says '~45 min active' for both workers, but per message_log timestamps: worker-01 active 35 min (task-001: 20 min + task-003: 15 min), worker-02 active 35 min (task-002: 20 min + task-004: 15 min).",
+            "location": "outputs/trajectory-swarm-20260206-1220.md, lines 15-16",
+            "fix_required": "Change '~45 min active' to '~35 min active' for both workers."
+          },
+          {
+            "severity": "minor",
+            "description": "Upstream data error (not in trajectory itself): task-004 HANDOFF completion_evidence in swarm-state.json claims 'ICS-40638 scored 0 on C1' but the actual score in mic-selection-recommendation.md is C1=1. The trajectory does NOT repeat this error (correctly states 'fails 140 dB by 2 dB') but the source state file contains the misstatement.",
+            "location": "swarm-state.json, message_log, task-004 HANDOFF, completion_evidence array item 3",
+            "fix_required": "Correct state file: change 'scored 0 on C1' to 'scored 1 on C1 but fails system-level 140 dB MUST requirement from task-003'."
+          }
+        ],
+        "recommendation": "Accept with corrections"
+      },
+      "requires_response": false
+    },
+    {
+      "timestamp": "2026-02-06T13:45:00.000000+07:00",
+      "from": "lead-01",
+      "to": "all",
+      "type": "STATUS",
+      "content": "FINAL CLOSE-OUT. Lead session summary generated at outputs/closeout-swarm-20260206-1220.md. 4 stakeholder decisions identified (D1-D4). Immediate actions: procure VM2020 eval units + request 377C01 quote + request sensiBel eval kit. All agents released. Session swarm-20260206-1220 complete.",
+      "requires_response": false
+    }
+  ],
+  "shared_context": {
+    "key_decisions": [
+      {
+        "timestamp": "2026-02-06T12:22:00.000000+07:00",
+        "decided_by": "lead-01",
+        "decision": "Task parallelization strategy: tasks 001, 002, 003 run concurrently. Task 004 blocked until all three complete. This maximizes worker utilization — researcher gathers data while analyst builds evaluation framework independently.",
+        "rationale": "Workers have complementary roles (data gathering vs. evaluation design). Running them in parallel reduces wall-clock time from ~105 min sequential to ~55 min parallel, well within the 90-min deadline."
+      },
+      {
+        "timestamp": "2026-02-06T12:22:00.000000+07:00",
+        "decided_by": "lead-01",
+        "decision": "Minimum 3+3 candidates required (3 piezo, 3 MEMS) to ensure meaningful comparison, not a foregone conclusion.",
+        "rationale": "Fewer than 3 per technology risks selection bias. More than 5 per type would exceed the 90-min deadline for thorough evaluation."
+      }
+    ],
+    "artifacts_created": [
+      {
+        "artifact_id": "art-001",
+        "type": "table",
+        "location": "outputs/sensor-candidates-specs.md",
+        "created_by": "worker-01",
+        "task_id": "task-001",
+        "description": "Microphone candidates comparison table — 7 sensors × 12 parameters with sources"
+      },
+      {
+        "artifact_id": "art-002",
+        "type": "matrix",
+        "location": "outputs/evaluation-matrix-template.md",
+        "created_by": "worker-02",
+        "task_id": "task-002",
+        "description": "VDI 2225 weighted evaluation matrix — 13 criteria, 5 categories, scoring guidelines, blank template"
+      },
+      {
+        "artifact_id": "art-003",
+        "type": "document",
+        "location": "outputs/bb01-lomah-constraints.md",
+        "created_by": "worker-01",
+        "task_id": "task-003",
+        "description": "BB-01 LOMAH system constraints — 5 categories, 15 derived requirements, 6 comparable system references"
+      },
+      {
+        "artifact_id": "art-004",
+        "type": "report",
+        "location": "outputs/mic-selection-recommendation.md",
+        "created_by": "worker-02",
+        "task_id": "task-004",
+        "description": "Final microphone selection recommendation — VDI 2225 scored matrix, TUV rankings, dual-path strategy (VM2020 + 377C01), risk register, validation test plan"
+      },
+      {
+        "artifact_id": "art-005",
+        "type": "trajectory",
+        "location": "outputs/trajectory-swarm-20260206-1220.md",
+        "created_by": "lead-01",
+        "task_id": "session-close",
+        "description": "Session trajectory — timeline, metrics, lessons learned, open actions"
+      },
+      {
+        "artifact_id": "art-006",
+        "type": "closeout",
+        "location": "outputs/closeout-swarm-20260206-1220.md",
+        "created_by": "lead-01",
+        "task_id": "session-close",
+        "description": "Lead close-out summary — executive summary, scorecard, decisions required, next steps"
+      }
+    ],
+    "blockers_active": [],
+    "lessons_learned": [
+      {
+        "lesson": "Dual-path recommendations are appropriate when no single candidate satisfies both technical and programmatic requirements. The VDI 2225 scoring revealed a fundamental technology gap — production-viable MEMS sensors lack bandwidth while acoustically superior piezo sensors lack production viability.",
+        "source": "task-004 analysis"
+      },
+      {
+        "lesson": "Worker-to-worker FYI messages (worker-01 flagging frequency response as critical differentiator to worker-02) improved task-002 quality without requiring Lead intervention. Self-coordination works.",
+        "source": "message_log observation"
+      },
+      {
+        "lesson": "Pre-production components (sensiBel SBM100B) should be included in trade studies for completeness but scored conservatively on availability/supply chain criteria. TBC specs are scored at worst-case.",
+        "source": "shadow-01 review of task-001"
+      }
+    ]
+  },
+  "health": {
+    "swarm_uptime_minutes": 80,
+    "agents_alive": 4,
+    "agents_total": 4,
+    "last_failure": null,
+    "coordination_errors": 0
+  }
+}

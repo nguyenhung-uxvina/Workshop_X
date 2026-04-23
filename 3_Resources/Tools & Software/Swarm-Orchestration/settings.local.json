@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(set:*)",
+      "Bash(PYTHONIOENCODING=utf-8 python init_swarm.py:*)",
+      "WebSearch",
+      "WebFetch(domain:www.pcb.com)",
+      "WebFetch(domain:www.grasacoustics.com)",
+      "WebFetch(domain:invensense.tdk.com)",
+      "WebFetch(domain:octopart.com)",
+      "WebFetch(domain:endevco.com)",
+      "WebFetch(domain:www.researchgate.net)",
+      "WebFetch(domain:www.steinertsensingsystems.com)",
+      "WebFetch(domain:www.zentechnologies.com)",
+      "WebFetch(domain:www.oakwoodcontrols.com)"
+    ]
+  }
+}

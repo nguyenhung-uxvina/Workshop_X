@@ -1,0 +1,155 @@
+{
+  "$schema": "Message Protocol v1.0 — 3 message types for swarm coordination",
+  "$doc": "Agents communicate by appending messages to swarm-state.json message_log. Lead monitors log, workers self-coordinate.",
+
+  "message_types": {
+
+    "STATUS": {
+      "$doc": "Worker → Log. Reports progress. No response needed. Lead reads passively.",
+      "template": {
+        "timestamp": "",
+        "from": "worker-01",
+        "to": "log",
+        "type": "STATUS",
+        "content": "",
+        "progress_pct": 0,
+        "requires_response": false
+      },
+      "examples": [
+        {
+          "timestamp": "2026-02-06T19:15:00+07:00",
+          "from": "worker-01",
+          "to": "log",
+          "type": "STATUS",
+          "content": "Completed sensor spec extraction for 3 piezoelectric candidates. Starting MEMS comparison.",
+          "progress_pct": 40,
+          "requires_response": false
+        },
+        {
+          "timestamp": "2026-02-06T19:30:00+07:00",
+          "from": "worker-02",
+          "to": "log",
+          "type": "STATUS",
+          "content": "VDI 2225 evaluation matrix drafted. 5 criteria weighted. Waiting for worker-01 sensor specs to populate scores.",
+          "progress_pct": 60,
+          "requires_response": false
+        }
+      ],
+      "rules": [
+        "Post STATUS every 2-3 minutes during active work",
+        "Include concrete progress (numbers, artifacts), not vague updates",
+        "If blocked, switch to REQUEST instead"
+      ]
+    },
+
+    "REQUEST": {
+      "$doc": "Any agent → specific agent or Lead. Asks for help, data, or decision. REQUIRES response.",
+      "template": {
+        "timestamp": "",
+        "from": "",
+        "to": "",
+        "type": "REQUEST",
+        "content": "",
+        "request_type": "data | decision | review | unblock",
+        "urgency": "low | medium | high | critical",
+        "requires_response": true,
+        "response_deadline_minutes": 5
+      },
+      "examples": [
+        {
+          "timestamp": "2026-02-06T19:20:00+07:00",
+          "from": "worker-02",
+          "to": "worker-01",
+          "type": "REQUEST",
+          "content": "Need piezoelectric sensitivity specs (dB re 1V/µPa) for ICP-type sensors to complete VDI 2225 scoring.",
+          "request_type": "data",
+          "urgency": "medium",
+          "requires_response": true,
+          "response_deadline_minutes": 5
+        },
+        {
+          "timestamp": "2026-02-06T19:45:00+07:00",
+          "from": "worker-01",
+          "to": "lead-01",
+          "type": "REQUEST",
+          "content": "Found conflicting specs for MEMS mic at 140dB SPL. Two sources disagree on max SPL handling. Need decision: use conservative or optimistic spec?",
+          "request_type": "decision",
+          "urgency": "high",
+          "requires_response": true,
+          "response_deadline_minutes": 3
+        }
+      ],
+      "rules": [
+        "Worker-to-worker REQUESTs for data are preferred over going through Lead",
+        "Only escalate to Lead for decisions, conflicts, or unresolvable blocks",
+        "If no response within deadline, post escalation to Lead",
+        "Lead should resolve REQUESTs within 2 minutes to avoid bottleneck"
+      ]
+    },
+
+    "HANDOFF": {
+      "$doc": "Agent → next agent or task_board. Transfers completed work with context. Moves task to next stage.",
+      "template": {
+        "timestamp": "",
+        "from": "",
+        "to": "",
+        "type": "HANDOFF",
+        "content": "",
+        "task_id": "",
+        "work_completed": "",
+        "key_outputs": [],
+        "artifacts": [],
+        "completion_evidence": [],
+        "next_action": "",
+        "warnings": [],
+        "requires_response": false
+      },
+      "examples": [
+        {
+          "timestamp": "2026-02-06T20:00:00+07:00",
+          "from": "worker-01",
+          "to": "shadow-01",
+          "type": "HANDOFF",
+          "content": "Sensor comparison research complete. Handing off to shadow for review.",
+          "task_id": "task-001",
+          "work_completed": "Extracted specs for 4 piezoelectric and 3 MEMS microphone candidates meeting BB-01 140dB SPL requirement.",
+          "key_outputs": [
+            "Comparison table with 7 sensors × 8 parameters",
+            "3 sensors eliminated (max SPL insufficient)",
+            "Top 2 candidates identified with rationale"
+          ],
+          "artifacts": [
+            {"type": "table", "location": "outputs/sensor-comparison-v1.md"},
+            {"type": "data", "location": "outputs/sensor-specs-raw.json"}
+          ],
+          "completion_evidence": [
+            "All 7 sensor datasheets reviewed",
+            "SPL handling verified against BB-01 requirement (140dB)",
+            "Cost data included for Vietnamese supply chain availability"
+          ],
+          "next_action": "Shadow agent verifies: (1) all specs sourced from datasheets, (2) elimination criteria correct, (3) top 2 ranking justified",
+          "warnings": [
+            "MEMS-03 spec sheet is from 2022 — may be outdated",
+            "Nhật Tảo availability not confirmed for piezo candidates"
+          ],
+          "requires_response": false
+        }
+      ],
+      "rules": [
+        "HANDOFF must include completion_evidence — not just 'I finished'",
+        "artifacts must be real file paths, not descriptions",
+        "Lead verifies HANDOFF before moving task to 'done'",
+        "Shadow agent reviews all HANDOFFs before Lead accepts"
+      ]
+    }
+  },
+
+  "routing_rules": {
+    "worker_to_worker": "Allowed for data requests. Reduces Lead bottleneck.",
+    "worker_to_lead": "Only for decisions, conflicts, task reassignment.",
+    "lead_to_worker": "Task assignment, conflict resolution, completion verification.",
+    "worker_to_shadow": "All HANDOFF messages go through shadow first.",
+    "shadow_to_lead": "Review results (pass/fail with issues found).",
+    "lead_to_all": "Broadcast announcements (mission changes, priority shifts)."
+  }
+}

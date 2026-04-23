@@ -1,0 +1,6 @@
+wo_id,product,variant,quantity,status,priority,start_date,target_date,completed_date,current_px,px_ckcx_status,px_dt_status,px_dc_status,px_vl_status,qc_status,customer,notes
+WO-2026-001,TOWED-TARGET,30mm Standard,5,In Process,High,2026-04-01,2026-05-15,,WS-CKCX,In Process,Pending,Pending,Pending,Pending,HD128 Hải quân,Batch 5 units for HD128
+WO-2026-002,VN-MGM,V1-NAVAL-12.7,3,In Process,High,2026-04-05,2026-05-20,,WS-DT,Completed,In Process,Pending,Pending,Pending,Vùng 4 HQ,Upgrade batch
+WO-2026-003,TARGET-DRONE,Simple V1,10,Queued,Medium,2026-04-20,2026-06-15,,—,Pending,Pending,Pending,Pending,Pending,Multiple units,Standard production run
+WO-2026-004,VN-CUAV-SIM-001,LITE PA-2 SS1 PoC,1,In Process,Critical,2026-04-15,2026-05-07,,WS-CKCX,In Process,Pending,Pending,Pending,Pending,Internal R&D,SS1 weapon station prototype — recoil PoC
+WO-2026-005,VN-MGM,V1-NAVAL-12.7,6,Queued,High,2026-05-05,2026-06-30,,—,Pending,Pending,Pending,Pending,Pending,HH Shipbuilding,6 units gun mount — chờ SLEWING-RING + WORM-GEAR COTS

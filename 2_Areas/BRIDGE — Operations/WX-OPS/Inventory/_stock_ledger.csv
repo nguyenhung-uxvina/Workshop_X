@@ -1,0 +1,17 @@
+item_code,item_name,item_group,warehouse,qty_on_hand,uom,reorder_level,reorder_qty,unit_cost_vnd,last_updated,supplier
+ALU-6061-10,Nhôm 6061 tấm 10mm,Metals,WH-NVL,20,tấm,5,10,850000,2026-04-15,Công ty TNHH Kim Loại VN
+STEEL-60x40,Thép hộp 60×40mm,Metals,WH-NVL,50,m,10,30,65000,2026-04-15,Thép Miền Nam
+ESP32-WROOM,ESP32-WROOM-32 DevKit,Electronics,WH-NVL,15,cái,5,20,95000,2026-04-15,Linh kiện Nhật Tảo
+ENCODER-600P,Rotary Encoder 600P/R,Electronics,WH-NVL,8,cái,4,10,320000,2026-04-15,Nhatao.com
+SOLENOID-24V,Solenoid Push-Pull 24VDC,Electronics,WH-NVL,10,cái,3,10,185000,2026-04-15,Linh kiện Nhật Tảo
+BTS7960,BTS7960 Motor Driver,Electronics,WH-NVL,6,cái,3,10,125000,2026-04-15,Linh kiện Nhật Tảo
+NFC-RC522,NFC Reader RC522,Electronics,WH-NVL,5,cái,3,10,45000,2026-04-15,Linh kiện Nhật Tảo
+BOLT-M10x30,Bu-lông M10×30 Inox,Fasteners,WH-NVL,200,cái,50,100,3500,2026-04-15,Ốc vít Đại Phát
+PROJ-BENQ,BenQ Short-throw 3300lm,COTS,WH-NVL,0,cái,0,3,12500000,2026-04-15,Phong Vũ
+RTX4090,NVIDIA RTX 4090 24GB,COTS,WH-NVL,0,cái,0,1,45000000,2026-04-15,An Phát Computer
+STEEL-PIPE-114,Ống thép 114mm OD×5mm wall,Metals,WH-NVL,12,m,3,6,185000,2026-04-15,Thép Miền Nam
+SLEWING-RING-300,Slewing ring bearing 300mm COTS,Bearings,WH-NVL,3,cái,2,5,4500000,2026-04-15,Bearing VN
+WORM-GEAR-SET,Worm gear elevation set,Mechanical,WH-NVL,4,bộ,2,5,3200000,2026-04-15,Cơ khí Tân Phát
+TRUNNION-PIN-25,Trunnion pin Ø25 C45 (tự gia công),Machined,WH-NVL,10,cái,4,10,85000,2026-04-15,Tự sản xuất
+SPADE-GRIP,Spade grip tay cầm traverse,Machined,WH-NVL,6,cái,4,8,350000,2026-04-15,Tự sản xuất
+PAINT-KIT-OD,Bộ sơn lót + phủ OD green (1 unit),Consumables,WH-NVL,8,bộ,3,10,280000,2026-04-15,Sơn Đại Bàng

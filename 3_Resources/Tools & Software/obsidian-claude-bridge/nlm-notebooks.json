@@ -1,0 +1,24 @@
+{
+  "notebooks": [
+    { "alias": "pb-textbook", "id": "069c732b", "name": "Pahl-Beitz Textbook (629pp)" },
+    { "alias": "pb-mastery", "id": "a7dbff9d", "name": "P&B Mastery (19 academic sources)" },
+    { "alias": "pb-mechai", "id": "fe6cbede", "name": "Khung THIẾT KẾ (WX framework)" },
+    { "alias": "pb-defense-ai", "id": "6c7fce5d", "name": "Cơ Khí QP Tích Hợp AI" },
+    { "alias": "kpipe", "id": "kpipe", "name": "Knowledge Pipeline" },
+    { "alias": "ast", "id": "ast", "name": "VN-AST-MSL-001 Towed Target" },
+    { "alias": "rcs", "id": "rcs", "name": "RCS & Radar" },
+    { "alias": "lomah", "id": "lomah", "name": "BB-01 LOMAH" },
+    { "alias": "127sim", "id": "127sim", "name": "VN-12.7MM-SIM" },
+    { "alias": "ach", "id": "ach", "name": "ACH Design Principle" },
+    { "alias": "mcp-agent", "id": "mcp-agent", "name": "MCP Agent" },
+    { "alias": "hdpe-mooring", "id": "hdpe-mooring", "name": "HDPE Mooring" },
+    { "alias": "stability", "id": "stability", "name": "Stability Analysis" },
+    { "alias": "triz", "id": "456df47b", "name": "TRIZ 40 Principles + Su-Field" },
+    { "alias": "127sim-comp", "id": "db245ba4", "name": "VN-12.7MM Competitive Landscape" }
+  ],
+  "commands": [
+    { "id": "query", "name": "Query", "description": "Ask a question to a notebook", "requiresQuery": true },
+    { "id": "cross-query", "name": "Cross-Query", "description": "Query multiple notebooks (max 3)", "requiresQuery": true, "multiNotebook": true, "maxNotebooks": 3 },
+    { "id": "sources", "name": "List Sources", "description": "List all sources in a notebook", "requiresQuery": false }
+  ]
+}

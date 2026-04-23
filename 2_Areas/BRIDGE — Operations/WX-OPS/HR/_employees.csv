@@ -1,0 +1,27 @@
+emp_id,name,position,department,px,start_date,phone,skills,status
+EMP-001,CEO,[CEO],Management,,,,Systems Engineering; Product Strategy; BD,Active
+EMP-002,PGĐ,[Phó GĐ],Management,,,,Operations; Manufacturing Management,Active
+EMP-003,QĐ Cơ Khí,[Quản đốc],PX Cơ Khí CX,WS-CKCX,,,CNC; Welding; Assembly; QC,Active
+EMP-004,QĐ Điện Tử,[Quản đốc],PX Điện Tử,WS-DT,,,PCB; Soldering; Testing; Embedded,Active
+EMP-005,QĐ Điện Cơ,[Quản đốc],PX Điện Cơ,WS-DC,,,Electromechanical; Wiring; Integration,Active
+EMP-006,QĐ Vật Liệu,[Quản đốc],PX Vật Liệu,WS-VL,,,Surface Treatment; Packaging; Materials,Active
+EMP-007,CN CK 01,[Công nhân],PX Cơ Khí CX,WS-CKCX,,,,Active
+EMP-008,CN CK 02,[Công nhân],PX Cơ Khí CX,WS-CKCX,,,,Active
+EMP-009,CN CK 03,[Công nhân],PX Cơ Khí CX,WS-CKCX,,,,Active
+EMP-010,CN CK 04,[Công nhân],PX Cơ Khí CX,WS-CKCX,,,,Active
+EMP-011,CN ĐT 01,[Công nhân],PX Điện Tử,WS-DT,,,,Active
+EMP-012,CN ĐT 02,[Công nhân],PX Điện Tử,WS-DT,,,,Active
+EMP-013,CN ĐT 03,[Công nhân],PX Điện Tử,WS-DT,,,,Active
+EMP-014,CN ĐT 04,[Công nhân],PX Điện Tử,WS-DT,,,,Active
+EMP-015,CN ĐC 01,[Công nhân],PX Điện Cơ,WS-DC,,,,Active
+EMP-016,CN ĐC 02,[Công nhân],PX Điện Cơ,WS-DC,,,,Active
+EMP-017,CN ĐC 03,[Công nhân],PX Điện Cơ,WS-DC,,,,Active
+EMP-018,CN ĐC 04,[Công nhân],PX Điện Cơ,WS-DC,,,,Active
+EMP-019,CN VL 01,[Công nhân],PX Vật Liệu,WS-VL,,,,Active
+EMP-020,CN VL 02,[Công nhân],PX Vật Liệu,WS-VL,,,,Active
+EMP-021,CN VL 03,[Công nhân],PX Vật Liệu,WS-VL,,,,Active
+EMP-022,CN VL 04,[Công nhân],PX Vật Liệu,WS-VL,,,,Active
+EMP-023,KTT,[Kế toán trưởng],Admin,,,,Accounting TT200; Tax; Reporting,Active
+EMP-024,NV TC,[NV Tài chính],Admin,,,,Invoice; Payment; Procurement,Active
+EMP-025,NV Kho,[NV Kho],Admin,,,,Inventory; Receiving; Issuing,Active
+EMP-026,NV TH,[NV Tổng hợp],Admin,,,,HR; Admin; IT Support,Active

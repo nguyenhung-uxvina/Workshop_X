@@ -1,9 +1,9 @@
 ---
 created: 2026-03-05
-updated: 2026-03-05
+updated: 2026-03-05 (rev: added dA/dt dimension from MVKS analysis)
 type: permanent-note
-tags: [#type/permanent-note, #topic/systems-thinking, #topic/ai-tools, #topic/learning]
-links: [[Phán đoán không thể uỷ thác cho AI]], [[AI Dependency Spiral (R3)]], [[Valley of Despair — Pre-threshold]]
+tags: [#type/permanent-note, #topic/systems-thinking, #topic/ai-tools, #topic/learning, #three-laws]
+links: [[Phán đoán không thể uỷ thác cho AI]], [[AI Dependency Spiral (R3)]], [[Valley of Despair — Pre-threshold]], [[KLEID — Framework Hệ Thống Tri Thức Có Compound]]
 ---
 
 # dJ/dt > dD/dt — Điều Kiện Sống Còn
@@ -24,10 +24,21 @@ Nghĩa là: Mỗi khi tăng delegation thêm 1 đơn vị,
 phải đảm bảo judgment đã tăng ít nhất 1 đơn vị trước đó.
 ```
 
-**Ba kịch bản:**
+**Ba kịch bản (delegation):**
 1. **dJ/dt > dD/dt** → An toàn. Delegation là leveraged judgment, không phải replacement.
 2. **dJ/dt ≈ dD/dt** → Nguy hiểm. Chỉ cần một lần tăng delegation nhanh hơn → rơi vào R3.
 3. **dJ/dt < dD/dt** → R3 đang thắng. Judgment atrophy bắt đầu. Cần giảm delegation ngay.
+
+**Mở rộng: dJ/dt vs dA/dt (AI capability rate)**
+
+Ngoài delegation, còn một race condition nguy hiểm hơn: judgment phải tăng nhanh hơn BẢN THÂN AI. Nếu AI capability tăng 4x/năm mà judgment chỉ tăng 1.5x/năm → bạn đang tụt hậu DÙ CÓ PKS.
+
+```
+dJ/dt > dD/dt   → Không bị phụ thuộc AI (micro)
+dJ/dt > dA/dt   → Không bị AI thay thế (macro)
+```
+
+dA/dt rất nhanh (AI cải thiện liên tục). Cách DUY NHẤT tăng dJ/dt đủ nhanh: track Decisions + Outcomes (KLEID's D dimension, /teach skill). Không track decisions = judgment stagnates = thua cuộc race dài hạn.
 
 **Cách đo thực tế:**
 - Track tỷ lệ manual/delegate hàng tuần (THỊNH protocol)
@@ -44,6 +55,7 @@ Vì đây là *công thức duy nhất* phân biệt giữa "dùng AI thông min
 - [[AI Dependency Spiral (R3)]] — Vi phạm dJ/dt > dD/dt là trigger chính của R3
 - [[Valley of Despair — Pre-threshold]] — Giai đoạn dJ/dt thấp nhất, dễ vi phạm nhất
 - [[Shifting the Burden Archetype]] — dJ/dt < dD/dt là toán học hoá "burden đang shift"
+- [[KLEID — Framework Hệ Thống Tri Thức Có Compound]] — D (Decisions) trong KLEID là cơ chế duy nhất tăng dJ/dt
 
 ## Nguồn Gốc
 

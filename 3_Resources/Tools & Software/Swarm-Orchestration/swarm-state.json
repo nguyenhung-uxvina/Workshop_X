@@ -1,0 +1,87 @@
+{
+  "$schema": "Swarm State v1.0 — Shared state for parallel multi-agent orchestration",
+  "$doc": "ALL agents read and write this file. This replaces sequential handoffs with parallel awareness.",
+
+  "swarm_id": "swarm-YYYYMMDD-HHMM",
+  "mission": {
+    "objective": "",
+    "success_criteria": [],
+    "deadline": "",
+    "priority": "HIGH"
+  },
+
+  "agents": {
+    "lead": {
+      "id": "lead-01",
+      "status": "active",
+      "last_heartbeat": "2026-02-06T19:00:00+07:00",
+      "current_action": "coordinating",
+      "message_queue_depth": 0,
+      "tasks_assigned": 0,
+      "tasks_verified": 0
+    },
+    "workers": [
+      {
+        "id": "worker-01",
+        "role": "researcher",
+        "status": "idle",
+        "last_heartbeat": "2026-02-06T19:00:00+07:00",
+        "current_task": null,
+        "progress_pct": 0,
+        "blockers": [],
+        "outputs": []
+      },
+      {
+        "id": "worker-02",
+        "role": "analyst",
+        "status": "idle",
+        "last_heartbeat": "2026-02-06T19:00:00+07:00",
+        "current_task": null,
+        "progress_pct": 0,
+        "blockers": [],
+        "outputs": []
+      }
+    ],
+    "shadow": {
+      "id": "shadow-01",
+      "status": "watching",
+      "last_heartbeat": "2026-02-06T19:00:00+07:00",
+      "reviews_pending": [],
+      "reviews_completed": [],
+      "issues_found": 0
+    }
+  },
+
+  "task_board": {
+    "backlog": [],
+    "in_progress": [],
+    "review": [],
+    "done": []
+  },
+
+  "message_log": [
+    {
+      "timestamp": "",
+      "from": "",
+      "to": "",
+      "type": "STATUS",
+      "content": "",
+      "requires_response": false
+    }
+  ],
+
+  "shared_context": {
+    "key_decisions": [],
+    "artifacts_created": [],
+    "blockers_active": [],
+    "lessons_learned": []
+  },
+
+  "health": {
+    "swarm_uptime_minutes": 0,
+    "agents_alive": 0,
+    "agents_total": 0,
+    "last_failure": null,
+    "coordination_errors": 0
+  }
+}

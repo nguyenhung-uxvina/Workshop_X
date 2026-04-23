@@ -1,0 +1,75 @@
+{
+  "$schema": "Trajectory v1.0 — Compound learning across swarm sessions",
+  "$doc": "Auto-generated after each swarm session. Future agents read past trajectories for instant context. Inspired by Meta's trajectory system.",
+
+  "trajectory_id": "traj-YYYYMMDD-HHMM",
+  "session_date": "",
+  "duration_minutes": 0,
+  "mission": "",
+
+  "team_composition": {
+    "lead": "",
+    "workers": [],
+    "shadow": "",
+    "total_agents": 0
+  },
+
+  "chapters": [
+    {
+      "title": "Mission Setup",
+      "events": [
+        {
+          "type": "decision",
+          "content": "",
+          "reasoning": "",
+          "significance": "high | medium | low"
+        }
+      ]
+    },
+    {
+      "title": "Execution",
+      "events": []
+    },
+    {
+      "title": "Coordination Incidents",
+      "events": []
+    }
+  ],
+
+  "outcomes": {
+    "mission_success": true,
+    "artifacts_produced": [],
+    "quality_score": 0,
+    "tasks_completed": 0,
+    "tasks_total": 0
+  },
+
+  "coordination_metrics": {
+    "lead_message_queue_max": 0,
+    "worker_autonomy_rate_pct": 0,
+    "shadow_issues_caught": 0,
+    "false_completions_detected": 0,
+    "agent_failures": 0,
+    "recovery_time_seconds": 0,
+    "longest_block_minutes": 0
+  },
+
+  "retrospective": {
+    "what_worked": [],
+    "what_broke": [],
+    "coordination_lessons": [],
+    "architecture_improvements": [],
+    "confidence": 0.0
+  },
+
+  "patterns_for_future": [
+    {
+      "pattern": "",
+      "context": "When this applies",
+      "recommendation": "What to do",
+      "anti_pattern": "What NOT to do"
+    }
+  ],
+
+  "tags": []
+}
