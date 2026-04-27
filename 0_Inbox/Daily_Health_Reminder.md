@@ -1,6 +1,6 @@
 ---
 created: 2026-04-12
-updated: 2026-04-20
+updated: 2026-04-27
 type: sop
 status: inbox
 tags: [#type/sop, #status/inbox, #topic/health]
@@ -8,7 +8,7 @@ tags: [#type/sop, #status/inbox, #topic/health]
 
 # 🏥 Nhắc Nhở Sức Khỏe Hàng Ngày
 
-**Ngày:** 2026-04-20
+**Ngày:** 2026-04-27
 
 ## Thuốc
 - [ ] Uống TAF 25mg (Teravir-AF) — uống cùng bữa ăn
