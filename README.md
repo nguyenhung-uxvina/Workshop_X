@@ -51,7 +51,7 @@ Flat structure, no subfolders. Each note = one atomic concept, written in the au
 
 - **Obsidian** — Primary editor and graph viewer
 - **Claude Code** — AI assistant with MCP integration
-- **Tana** — Supplementary node-based workspace (via MCP bridge)
+- **Tana** — Supplementary node-based workspace (via official local MCP server — see `3_Resources/Tools & Software/Tana MCP Connection.md`)
 
 ## Language
 
