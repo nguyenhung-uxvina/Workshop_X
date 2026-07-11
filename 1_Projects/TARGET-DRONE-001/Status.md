@@ -1,14 +1,20 @@
 ---
 created: 2026-04-09
-updated: 2026-04-19
+updated: 2026-07-10
 type: project
-status: active
-tags: [#type/project, #status/active]
+status: on-hold
+tags: [#type/project, #status/on-hold]
 tier: 2-product-dev
 origin: IRONMESH portfolio (unfrozen 2026-04-09)
+deferred: 2026-07-10
+deferred_reason: "Delete Pass v2 (barbell): RE pipeline blocked by TAI ITAR-free cert (ngoài tầm kiểm soát), V5-JET là sản phẩm 2028+. Vùng giữa barbell — không đủ safe (chưa có khách V5), không đủ lồi (RE catch-up ≠ moat). Production drone simple KHÔNG bị ảnh hưởng."
+resume_condition: "TAI trả lời ITAR-free cert, HOẶC khách hàng đặt V5-JET/V4-FULL, HOẶC CUAV-SIM Phase 3 ship xong giải phóng bandwidth."
 ---
 
 # TARGET-DRONE-001 — Air Target Drone — Status
+
+## ⏸️ ON HOLD (2026-07-10 — Delete Pass v2)
+**RE pipeline (Simsek-K) FROZEN tại Stage 3.** Blocking: ITAR-free certification từ TAI (Stage 1M condition #1) — ngoài tầm kiểm soát WX. Production line drone simple (200 shipped, TRL 9) tiếp tục bình thường — không thuộc scope dự án này.
 
 ## Tier
 **Tier 2 — Product Dev** (complements VN-CUAV-SIM live training capability)

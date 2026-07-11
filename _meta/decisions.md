@@ -165,3 +165,41 @@ Format: `[YYYY-MM-DD] [decision] — [context] — [alternatives] — [rationale
 [2026-03-20] VN-12.7MM-SIM forge-job-map: DIFFERENTIATED strategy — Context: 58 desired outcomes mapped, AI-estimated I×S scores. Top 6 underserved: O-26 recoil (10.0), O-30 hit/miss (9.8), O-27 traverse (9.6), O-37 bad habits (9.6), O-38 miss diagnosis (9.4), O-13 setup time (9.0). — Alternatives: Dominant (all outcomes), Discrete (simplify overserved), Disruptive (new approach) — Rationale: InVeris serves Step 5 at $500K+. WX differentiates on Step 3 (10× cheaper setup), Step 7 (adaptive I-08), Step 8 (auto-reporting). 5 ACH candidates confirmed for I-08. 4 new requirements approved (PR-022, SW-022/023/024). Scores are AI estimates — user interviews still needed.
 
 [2026-03-20] VN-12.7MM-SIM Recoil: RC-A Pneumatic Standard — Context: Doc 022 Phase 2b subsystem concept selection. 5 concepts evaluated via VDI 2225 (10 criteria, 28 weight points). Two-Channel architecture: Channel A (brake, decided) + Channel B (recoil impulse, this decision). — Alternatives: RC-A Pneumatic (78.6%), RC-C Electric (72.3%), RC-D Cam-Spring (68.8%), RC-B CO2 (64.3%), RC-E Blank (53.6%, eliminated: noise). — Rationale: RC-A is ONLY concept meeting 70% force threshold for 12.7mm (2,300 N peak). Fits V2 budget ($800-1,500 added). Zero patent conflict (ACME/Haptech abandoned pneumatic). Low coupling risk (score 10 vs RC-C 17). MOUNT framework: pneumatic NOW, design for electric swap in I-06/I-08. Data capture pipeline ($50 added sensor) enables I-08 ACH flywheel.
+
+## 2026-07-10 — DELETE PASS v2 (Barbell) — Portfolio 12 mặt trận → 3 + 2 clock
+
+**Context:** Tư vấn chiến lược AI-first + hội đồng mentor (Johnson/Luckey/Musk/Naval/Taleb/Christensen) → đồng thuận: cắt vùng giữa barbell trước khi scale. Đọc 17 Status.md: vault "mù" từ ~21/05 (49 ngày), 5 gate/deadline trôi không ghi nhận (CUAV SS1 05-07, XUONG OEM reply 05-07, AICC CM4 exit 06-05, TGT-F PROTO 06-09, EXH-BPS bottlenecks 25/05→15/06). Finding #0: rủi ro lớn nhất = hợp đồng thật EXH-BPS 5,000M VNĐ không được quan sát.
+
+**Alternatives:** (A) giữ nguyên 12 active, (B) freeze sâu về 3 mặt trận + điều kiện tự hủy, (C) freeze toàn bộ trừ EXH-BPS.
+
+**Decision (B):**
+- **SAFE:** EXH-BPS = ưu tiên vận hành #1 (deadline thật 12-10). Production lines tiếp tục. MGM N10-MAINT-KIT kích hoạt như revenue line (bước 1 của MAINT-KIT $320K/yr).
+- **CONVEX (≤2 vé):** CUAV-SIM Phase 3 (U-2 của 2026) + AICC (⏰ CM4 benchmark trước 2026-07-24 hoặc AUTO ON-HOLD).
+- **CHỜ TÍN HIỆU:** XUONG-UUV (chờ-OEM, nhịp thấp) + BB-01 (⏰ piezo bench test trước 2026-08-10 hoặc AUTO-FREEZE — CEO confirmed).
+- **FREEZE MỚI:** TARGET-DRONE RE pipeline (ITAR cert ngoài tầm kiểm soát), MGM V5-MOTORIZED.
+- **MERGE:** VN-TGT-F Module-PROTO → BB-01 (hit-detection platform chung, trùng 80% piezo+ESP32+LoRa — CEO confirmed merge over freeze). TGT-F = catalog, không phải dự án.
+- **ARCHIVE:** Practice-PB (0/126h, anchor chết trước khi bắt đầu), Practice-ICDM (Week 1/6, giá trị đã bank, retro tại _Retro_2026-07-10.md), WX-KPIPE-001 (bookkeeping fix, G4 MET từ 03-20). Moved → 4_Archives/Projects/.
+- **GIỮ ON-HOLD:** USV, AIA-128, 12.7MM-SIM, ACH-Thesis (media leverage → /skill-to-public thay thế), WX-ERP (resume như OPS task khi MAINT-KIT cần invoice).
+
+**Rationale:** Johnson một-U-2-mỗi-năm + Taleb barbell (không có gì ở giữa) + Musk delete-trước-optimize. Điều kiện tự hủy (2 clock) chống lại trạng thái "reactivated nhưng không chạy" = vùng giữa trá hình. Vòng ecosystem 8/8 chấp nhận rủi ro lùi 2027 nếu BB-01 clock fail — trung thực hơn giả vờ active.
+
+**⚠️ OPEN:** VN-AST-MSL-001 CHƯA có verdict (sót khỏi bảng barbell) — 2 bộ deployed, Phase 2 done, gate 04-05/07 trôi. CEO cần quyết: Phase 3 hay on-hold.
+
+**Ground-truth actions tuần này (CEO):** (1) EXH-BPS: B-02 PE / B-05 demil / B-06 permit ở đâu? (2) CUAV SS1 PoC 05-07 kết quả? (3) XUONG OEM reply? (4) Đặt mua piezo + LM358 (<$50) khởi động BB-01 clock.
+
+## 2026-07-10 — GROUND-TRUTH SESSION (bổ sung Delete Pass v2)
+
+**4 tín hiệu CEO xác nhận:**
+1. **VN-EXH-BPS-001: HỦY** ❌ — hợp đồng ~5,000M VNĐ cancelled. Lý do chưa ghi nhận — CẦN bổ sung để rút bài học (ECR-001 scope? negotiation? demil?). Phase 1 artifacts (75 reqs, Essential Problem, demil analysis) giữ làm reference. **Hệ quả cấu trúc: safe end của barbell = production + MAINT-KIT ONLY. Portfolio không còn deadline hợp đồng ngoài — kỷ luật dP/dt giờ hoàn toàn tự áp đặt.**
+2. **CUAV SS1 PoC (gate 05-07): CHƯA THỰC HIỆN** — trôi 64 ngày. U-2 của năm không có physical validation. Đề xuất gate mới ≤ 2026-08-09 (Tier 1 rule). Sau khi EXH hủy, đây là physical gate quan trọng nhất portfolio.
+3. **XUONG OEM ICD reply: RECEIVED** ✅ — nội dung chưa nạp vault. Next: nạp response → resolve SA-02 (winch) + SA-04 (OEM controller power) → Gate 2.
+4. **BB-01 piezo components: ĐÃ ĐẶT MUA** ✅ — clock 2026-08-10 đang chạy hợp lệ.
+
+**Trạng thái portfolio sau ground-truth:** 3 mặt trận đều có nước đi rõ tuần này: (a) CUAV — chốt ngày SS1 PoC, (b) XUONG — nạp OEM reply, (c) BB-01 — chờ hàng, dựng bench. 2 clock: AICC 07-24, BB-01 08-10.
+
+## 2026-07-11 — Delete Pass v2: 2 verdict cuối
+
+1. **VN-AST-MSL-001: ON-HOLD** — Context: sót khỏi bảng barbell 07-10, G3 + weld coupon gate (04/05-07) trôi. Alternatives: Phase 3 tiếp / on-hold. Rationale: Phase 2 done G2 3.85 = điểm dừng sạch nhất có thể; TRÒN là premium upgrade không có khách đang chờ; 2 bộ deployed vẫn phục vụ. Resume: đơn hàng TRÒN / BB-01 V3-SCORED keystone / bandwidth sau CUAV Phase 3.
+2. **EXH-BPS lý do hủy (bổ sung):** KHÔNG PHÙ HỢP CHIẾN LƯỢC + thời gian quá ngắn. Bài học distill: triển lãm one-off = "project" không phải "product" (không lặp lại, không platform, không recurring) + 203 ngày với 6 bottleneck ngoài tầm kiểm soát (demil 8-16 tuần, PE license, permit Bộ CA) = fragile ở cả 2 chiều barbell. Từ chối 5 tỷ VNĐ vùng giữa = kỷ luật Luckey "products not projects" thực thi bằng tiền thật. → Galaxy candidate.
+
+**PORTFOLIO SAU DELETE PASS v2 (final):** Active thực = CUAV-SIM (U-2, cần chốt SS1 gate ≤08-09) + AICC (clock 07-24) + BB-01 (clock 08-10, hàng đã đặt) + XUONG (nạp OEM reply). Còn lại: production ops + MAINT-KIT revenue line + 8 on-hold/merged/cancelled + 3 archived.

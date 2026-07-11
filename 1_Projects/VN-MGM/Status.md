@@ -1,14 +1,22 @@
 ---
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-07-10
 type: project
-status: active
-tags: [#type/project, #status/active]
+status: on-hold
+tags: [#type/project, #status/on-hold]
 tier: 3-strategic
 origin: IRONMESH portfolio (unfrozen 2026-04-09)
+deferred: 2026-07-10
+deferred_reason: "Delete Pass v2 (barbell): V5-MOTORIZED ($50K NRE, 11-15 tuần, cần range access) = vùng giữa khi CEO không có bandwidth. V1 production (300 shipped) + N10-MAINT-KIT chuyển sang OPS/revenue line, không phải design project."
+resume_condition: "Khách đặt V5/N12, HOẶC AICC fire-control sẵn sàng (pre-RCWS synergy), HOẶC bandwidth trống sau CUAV-SIM Phase 3."
 ---
 
 # VN-MGM — Mount/Gimbal System — Status
+
+## ⏸️ ON HOLD design work (2026-07-10 — Delete Pass v2)
+- **V5-MOTORIZED FROZEN** (B0-BD done, BE deferred → bench test khi resume)
+- **V1-NAVAL-12.7 production tiếp tục** (300 shipped, TRL 9) — ops, không phải design
+- **🟢 N10-MAINT-KIT KÍCH HOẠT như REVENUE LINE** — consumable $200-500/unit/yr trên installed base. Đây là bước 1 của chiến lược MAINT-KIT $320K/yr toàn portfolio (xem decisions.md 2026-07-10). Vận hành qua ERP khi Phase 1 ERPNext chạy — không cần Pahl-Beitz pipeline.
 
 ## Tier
 **Tier 3 — Strategic** (supporting hardware for weapon station products)

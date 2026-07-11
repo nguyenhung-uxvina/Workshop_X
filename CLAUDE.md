@@ -1,7 +1,7 @@
 # CLAUDE.md — IPARAG Vault State
 
 > Workshop X vault. Agentic rules in Global CLAUDE.md (KN-Stack).
-> Cập nhật lần cuối: 2026-04-23 | Review tiếp theo: 2026-04-30
+> Cập nhật lần cuối: 2026-07-10 (Delete Pass v2 — barbell) | Review tiếp theo: 2026-07-24 (AICC clock) + 2026-08-10 (BB-01 clock)
 
 ---
 
@@ -12,29 +12,33 @@ Workshop_X/
 ├── Home.md                    ← Dashboard chính
 ├── CLAUDE.md                  ← File này (vault state only)
 ├── 0_Inbox/                   ← Tiếp nhận mọi thứ (Inbox Zero achieved)
-├── 1_Projects/                ← 8 active + 2 on hold | 79 variants | $15.7M/5yr realistic [L3-L4]
+├── 1_Projects/                ← DELETE PASS v2 (2026-07-10, barbell): 3 mặt trận CEO + 2 clock | $15.7M/5yr [L3-L4]
 │   │                           PRODUCTION HISTORY: 1,064 HW units + 8 sim systems shipped
 │   │
-│   │  ── TIER 1: CASH COWS (scale + upsell) ──
-│   ├── Towed Target (30mm+12.7mm)/          **550 shipped** | Tier 1 Cash Cow | TRL 9
-│   ├── VN-MGM/                              **300 shipped** | Tier 1 Cash Cow | TRL 9 | 12 variants
-│   ├── TARGET-DRONE-001/                    **200 shipped** (simple) | Tier 1 Cash Cow | TRL 9 | 11 variants
-│   ├── Naval Sim (Vega Prime)/              **8 systems** (6 toàn tàu + 2 AK630/176) | Tier 1 Cash Cow | TRL 9
+│   │  ── VẬN HÀNH / SAFE END (nuôi công ty) ──
+│   ├── Towed Target (30mm+12.7mm)/      **550 shipped** | Cash Cow production | TRL 9
+│   ├── VN-MGM/                          **300 shipped** production + 🟢 N10-MAINT-KIT = revenue line | [FROZEN] V5-MOTORIZED design
+│   ├── TARGET-DRONE-001/                **200 shipped** production | [FROZEN 07-10] RE pipeline (chờ TAI ITAR cert)
+│   ├── Naval Sim (Vega Prime)/          **8 systems** | Cash Cow | TRL 9
+│   │   ⚠️ Sau EXH-BPS hủy: safe end = production + MAINT-KIT ONLY. Không còn deadline hợp đồng ngoài nào — mọi kỷ luật dP/dt giờ là TỰ ÁP ĐẶT (2 clock bên dưới).
 │   │
-│   │  ── TIER 1: ACTIVE DEVELOPMENT ──
-│   ├── VN-CUAV-SIM-001/                **Tier 1 Upgrade** (Vega→Unity, Phase 2 DONE G2 3.71, Phase 3 starting, LITE-PA2 C4 selected, gate 2026-05-07)
-│   ├── VN-XUONG-UUV/                   **Tier 1 Prototype** (1 đang chế tạo, Phase 2, 9 variants)
+│   │  ── CONVEX END (≤2 vé lồi) ──
+│   ├── VN-CUAV-SIM-001/                🔴 **U-2 của 2026** — Phase 3. SS1 PoC gate 05-07 CHƯA THỰC HIỆN (trôi 64 ngày). CẦN CHỐT gate mới ≤ 2026-08-09 — physical gate quan trọng nhất portfolio
+│   ├── VN-AICC/                         Vé lồi #2 — ⏰ CM4 benchmark trước **2026-07-24** hoặc AUTO ON-HOLD
 │   │
-│   │  ── TIER 2: SCALE + UPGRADE ──
-│   ├── BB-01_LOMAH/                     **3 shipped** | Tier 2 Scale (Phase 1, 9 variants)
-│   ├── VN-AST-MSL-001 Towed Target/    **2 bộ deployed** | Tier 2 Upgrade (Phase 2 done, TRÒN, 10 variants)
-│   ├── VN-USV-SS-001/                   Tier 2 New (Phase 0, 10 variants, gate 2026-05-09)
+│   │  ── CHỜ TÍN HIỆU ──
+│   ├── VN-XUONG-UUV/                    Tier 1 — ✅ OEM reply RECEIVED (07-10), nội dung chưa nạp vault → nạp ICD response + resolve SA-02/SA-04 → Gate 2
+│   ├── BB-01_LOMAH/                     ⏰ Bench test trước **2026-08-10** hoặc AUTO-FREEZE — ✅ components đã đặt mua, clock chạy | absorbed VN-TGT-F Module-PROTO
 │   │
-│   │  ── TIER 3: CONCEPT ──
-│   ├── Practice-ICDM/                   Tier 3 Learning (6 weeks, 14h, anchor CUAV-SIM, Wk1 DONE, Wk2 starting)
-│   ├── VN-AICC/                         Tier 3 Concept (Phase 3 paused, 9 variants, CM4 blocker)
-│   ├── [ON HOLD] VN-12.7MM-SIM/        Absorbed by VN-CUAV-SIM MWI
-│   └── [ON HOLD] ACH-Thesis-Publication/ Bandwidth reallocation
+│   │  ── CANCELLED ──
+│   ├── [CANCELLED 07-10] VN-EXH-BPS-001/ HỦY: không phù hợp chiến lược (one-off project ≠ product) + timeline quá ngắn. Phase 1 artifacts = reference
+│   │
+│   │  ── ON HOLD / MERGED ──
+│   ├── [MERGED→BB-01] VN-TGT-F/         Catalog 13 SKU bia BQP, kích hoạt khi có đơn
+│   ├── [ON HOLD 07-11] VN-AST-MSL-001/  Phase 2 done G2 3.85 (điểm dừng sạch) — resume khi có đơn TRÒN, vào thẳng Phase 3 (OI-1 weld coupon)
+│   ├── [ON HOLD] VN-USV-SS-001, VN-AIA-128, VN-12.7MM-SIM, ACH-Thesis, WX-ERP-001
+│   │             (WX-ERP resume như OPS task khi MAINT-KIT cần invoice — giao NV Tổng hợp)
+│   └── [ARCHIVED 07-10] Practice-PB, Practice-ICDM, WX-KPIPE-001 → 4_Archives/Projects/
 ├── 2_Areas/                   ← 4 Areas (BRIDGE x FORGE x HELIX = Compound Law)
 │   ├── BRIDGE — Operations/           (Finance, Team, Legal, Viettel, Defense Ecosystem)
 │   ├── FORGE — Product Strategy/      (ACH Principle, Portfolio, Tech Roadmap, Market Intel, IP)

@@ -1,14 +1,20 @@
 ---
 created: 2026-04-06
-updated: 2026-04-15 (S72 — Phase2-Concept reorganized: variant subfolders + _portfolio/)
+updated: 2026-07-10 (ground-truth: SS1 PoC gate 05-07 CHƯA thực hiện — cần đặt lại)
 type: project-status
 status: active
 tier: 1
-pahl-beitz-phase: 2
+pahl-beitz-phase: 3
 tags: [#type/project, #status/active]
 ---
 
 # VN-CUAV-SIM-001 — Status
+
+## 🔴 PHYSICAL GATE RESET REQUIRED (ground-truth 2026-07-10)
+- **SS1 PoC physical gate (2026-05-07): CHƯA THỰC HIỆN** — trôi 64 ngày. CEO xác nhận trong Delete Pass v2 ground-truth session.
+- Sau khi EXH-BPS hủy, **SS1 PoC là physical gate quan trọng nhất toàn portfolio** — CUAV-SIM là U-2 của 2026 và là dự án duy nhất còn momentum.
+- **Đề xuất gate mới: ≤ 2026-08-09** (rule Tier 1: physical gate ≤ 30 ngày). CEO cần chốt ngày + scope PoC (weapon station SS1, ~$1,330 BOM đã có từ Morpho).
+- ⚠️ Rule cảnh báo: Tier 1 không có physical gate trong 30 ngày → project đang trượt sang "Area mode".
 
 ## Tổng Quan
 

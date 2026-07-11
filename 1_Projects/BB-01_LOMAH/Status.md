@@ -1,13 +1,27 @@
 ---
 created: 2026-03-05
-updated: 2026-04-09
+updated: 2026-07-10
 type: project
 status: active
 tags: [#type/project, #status/active]
 tier: 2-product-dev
+conditional_until: 2026-08-10
+auto_freeze_condition: "Piezo bench test PHẢI có kết quả (force-time curve trên bàn thử) trước 2026-08-10. Không đạt → tự động on-hold, vòng ecosystem 8/8 chấp nhận lùi sang 2027. CEO decision 2026-07-10 (Delete Pass v2)."
 ---
 
 # BB-01 LOMAH — Status
+
+## ⏰ 30-DAY CLOCK (CEO decision 2026-07-10 — Delete Pass v2)
+- **Điều kiện giữ active:** piezo bench test có kết quả **trước 2026-08-10**. Không đạt → AUTO-FREEZE.
+- ✅ **Components ĐÃ ĐẶT MUA** (CEO xác nhận 2026-07-10) — clock đang chạy, chờ hàng về → dựng bench test.
+- **dP/dt note:** đây là dP/dt test của cả portfolio — 91 ngày zero physical activity tính đến delete pass.
+
+## 🔀 ABSORBED: VN-TGT-F Module-PROTO (2026-07-10)
+BB-01 giờ là **nền tảng hit-detection chung** cho 2 dòng sản phẩm:
+1. **BB-01 LOMAH** — miss/hit trên bia LOMAH (scope gốc, KHÔNG đổi hard constraints)
+2. **VN-TGT-F bia BQP** — 13 SKU bia nổi/cố định (catalog tại `1_Projects/VN-TGT-F/`), dùng chung piezo + ESP32 + LoRa stack
+- 1 bench test validate cả hai. TGT-F SKU kích hoạt khi có đơn hàng.
+- COTS order gộp: piezo, ESP32, LoRa (nguyên list TGT-F PROTO).
 
 ## Current Phase
 **Phase 1: Task Clarification** (Week 1, started 2026-03-05)

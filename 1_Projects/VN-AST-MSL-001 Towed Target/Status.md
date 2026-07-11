@@ -1,15 +1,21 @@
 ---
 created: 2026-03-05
-updated: 2026-04-09
+updated: 2026-07-11
 type: project
-status: active
-tags: [#type/project, #status/active]
+status: on-hold
+tags: [#type/project, #status/on-hold]
 tier: 2-product-dev
 tier_changed: 2026-04-09
 tier_change_reason: "CEO downgraded Tier 1 → Tier 2. VN-CUAV-SIM-001 lên Tier 1 thay thế."
+deferred: 2026-07-11
+deferred_reason: "Delete Pass v2 verdict (CEO 2026-07-11): on-hold chờ đơn hàng. Phase 2 done G2 3.85 = trạng thái dừng sạch. TRÒN là premium upgrade — 2 bộ đã deployed vẫn phục vụ khách. G3 target 04-05 + HDPE weld coupon gate 04-07 đã trôi không thực hiện."
+resume_condition: "Có đơn hàng TRÒN/variant mới, HOẶC BB-01 V3-SCORED cần keystone integration, HOẶC bandwidth trống sau CUAV-SIM Phase 3."
 ---
 
 # VN-AST-MSL-001 "THANH TRI" — Status
+
+## ⏸️ ON HOLD (2026-07-11 — Delete Pass v2, CEO verdict)
+Dừng tại điểm sạch: Phase 2 COMPLETE (G2 3.85/4.0, C1 TRÒN selected). Khi resume → vào thẳng Phase 3 với OI-1 (HDPE weld coupon) là việc đầu tiên. Catalog 10 variants giữ nguyên.
 
 ## Tier
 **Tier 2 — Product Dev** (demoted from Tier 1 on 2026-04-09, CEO decision)

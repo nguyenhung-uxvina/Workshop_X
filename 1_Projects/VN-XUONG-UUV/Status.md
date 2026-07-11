@@ -1,6 +1,6 @@
 ---
 created: 2026-03-06
-updated: 2026-04-14
+updated: 2026-07-10
 type: project
 status: active
 tags: [#type/project, #status/active]
@@ -37,7 +37,7 @@ tier: 1-prototype
 - Recovery method: Stern channel + rollers + permanent pendant winch (TRV proven)
 - **Crane SWL tàu mẹ: 2.5t** → chỉ cho UUV loading (550kg)
 - **Vessel baseline (Phase 2 decided):**
-  - 8m aluminum 5083, twin outboard (2 x 40-60 HP)
+  - 8m aluminum 5083, twin outboard (2 x 70 HP — Yamaha F70)
   - **Tốc độ tối đa: 25 kts [L2]**
   - Electric LARS (VFD) + **battery bank 24V LiFePO4** (genset ELIMINATED 2026-04-14)
   - Permanent pendant winch (SA-02 resolved)
@@ -52,16 +52,17 @@ tier: 1-prototype
 3. ~~Chưa có reference design~~ → 4 analyses + cross-comparison done
 4. ~~Solo engineer priority~~ → **Musk Sequence #1** (confirmed 2026-03-06)
 5. ~~D=400mm custom cradle~~ → Requirements baselined (Doc 002)
-6. **ICD Template chưa gửi cho UUV OEM** → BLOCKING for Phase 2 detailed analysis
+6. ~~ICD Template chưa gửi cho UUV OEM~~ → SENT 2026-04-23 (v1.6 to Trần Thiện <vittel@gmail.com>)
 
 ## Key Decisions (Phase 2) — ALL RESOLVED
-- PD-1: **Twin outboard** (2 x 40-60 HP) [L2] — DECIDED
-- PD-2: **Electric LARS** (VFD + genset) — FORCED by PD-1
+- PD-1: **Twin outboard** (2 x 70 HP — Yamaha F70) [L2] — DECIDED (revised 2026-04-23: 40-60 HP undersized cho 25 kts target, recalc → 70 HP minimum)
+- PD-2: **Electric LARS** (VFD + battery 24V LiFePO4) — FORCED by PD-1; genset ELIMINATED 2026-04-14 per SA review
 - PD-3: **Permanent pendant** (winch cable gắn cố định vào cradle) [L2] — DECIDED
 - ~~PD-4: Cable drum location~~ — LOẠI (drum trong UUV)
 - ~~PD-5: Cable routing vs LARS~~ — LOẠI (chỉ cable guide on deck)
 - ~~PD-6: TMS-LARS sync~~ — LOẠI (UUV tự quản lý cáp)
 - PD-7: **3 crew** (Helmsman / LARS op / UUV op) [L2] — DECIDED
+- PD-8: **ACH = NO-GO** (vessel-level) — DECIDED 2026-04-23 via /forge-shift. Lý do: toàn bộ vessel là physical-force domain (ACH Boundary Rule violation), không có hardware đắt tiền để thay thế. HMI add-ons (USBL recovery assist, seakeeping coach) để dành Phase 4+ nếu cần, không thuộc SHIFT scope.
 
 ## Kanban
 
@@ -77,7 +78,7 @@ tier: 1-prototype
 - [x] Cable weight confirmed: 0.5 kg/km = 12.5 kg (negligible)
 - [x] ~~VDI 2225 concept selection~~ — không cần (1 concept duy nhất, design space đóng)
 - [x] TRV reference research: 12 US Navy + 4 international + 2 LARS systems
-- [x] ICD Template updated v1.3 (streamlined, Section K, VN translation, DOCX exported)
+- [x] ICD Template updated v1.6 (streamlined, Section K, VN translation, DOCX exported)
 - [x] 3 SOPs updated v1.1 (electric LARS, no TMS, permanent pendant, known values)
 - [x] Preliminary stability check (Doc 009): GM = 1.52m >> 0.5m PASS
 - [x] Function Structure v2.0 (Doc 006): 43→35 active SFs, all PD resolved, F5 collapsed
@@ -95,16 +96,20 @@ tier: 1-prototype
 - [x] 7 shadow assumptions detected (2 HIGH: SA-02 winch voltage, SA-04 OEM controller power)
 
 ### In Progress (Phase 2 — Conceptual Design)
-- [ ] **BLOCKING:** Gửi ICD Template v1.3 cho UUV OEM
+- [x] **Gửi ICD Template v1.6 cho UUV OEM** — DONE 2026-04-23 (sent to Trần Thiện <vittel@gmail.com>); 2-week response window → expected reply by 2026-05-07
+- [x] **OEM ICD reply RECEIVED** — CEO xác nhận 2026-07-10 (ground-truth session). ⚠️ Nội dung reply CHƯA nạp vault — cần nạp ICD response vào `System-Arch/` để resolve SA-04 (OEM controller power) + interface TBDs
 - [ ] **NEW BLOCKING:** Market survey 24VDC marine winch 10 kN (SA-02)
 
 ### To Do (Human Core — Gate 2 Critical Path)
 - [ ] **Human review Doc 007 working principles** (~2 hrs) — unblocks G2-1
 - [ ] **Draw GA sketch** (~4 hrs) — required evidence
-- [ ] **BOM local content classification** (~2 hrs) — unblocks G2-6
+- [x] **BOM local content classification** — DONE 2026-04-23 (Doc 013, VN% = 79.8%, unblocks G2-6)
 - [ ] Stakeholder interviews S1, S2, S4
 - [ ] Seakeeping assessment (partner)
 - [ ] **Formal Gate 2 Review** (target: 2026-03-14 to 2026-03-21)
+
+### Backlog (Post-Gate 2)
+- [ ] **PD-1 cascade re-calc** — propagate 2×70 HP Yamaha F70 vào Doc 006/007/008/009/011/012 + 4 customer proposals + 2 templates. Cần Yamaha F70 datasheet + dealer quote VN. Deferred 2026-04-23.
 
 ### Completed (AI Offload — Phase 2)
 - [x] Weight estimate v2 (Doc 008): lightship ~2,820 kg, loaded ~3,843 kg
