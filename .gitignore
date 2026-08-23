@@ -1,2 +1,69 @@
 .obsidian/
 .claude/
+
+# Large binary files — keep locally, exclude from git
+*.pdf
+*.docx
+*.xlsx
+*.zip
+*.stp
+*.X_T
+*.gguf
+
+# Images — keep locally, track only in project deliverables
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.svg
+
+# Runtime artifacts
+excalidraw.log
+*.base
+progress.md
+docs/
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Sách icdm-hari-weiss — book.md chứa Ch16 SENSITIVE (99 nhắc helix-*, 7 định danh sản phẩm,
+# 9 thiếu sót chưa vá của hệ chất lượng). Repo này PUBLIC → không bao giờ commit bản đầy đủ.
+# Bản đối ngoại book-public.md đã sạch, nhưng vẫn để CEO quyết từng lần.
+3_Resources/Books/icdm-hari-weiss/
+4_Archives/_backups/
+
+# Sach tap 2 (P&B) — cung ly do voi tap 1: repo PUBLIC, ban day du co the cham noi dung noi bo.
+3_Resources/Books/pahl-beitz-tap2/
+
+# ── Books/ — repo PUBLIC, chỉ cho cuốn đã quét sạch đi qua (2026-08-23) ────────
+# Quét cả 7 thư mục sách bằng bộ dò định danh nội bộ (xem cổng ngoài repo).
+# Kết quả: tu-khong-den-mot 974 lượt · phuong-phap-thiet-ke-khi-tai-co-ai 293 ·
+# mentor-chris-brose 163 · finding-alphas 117. Chúng chưa lên git, nhưng một lần
+# `git add .` là lên hết — nên chặn ở đây, cùng lý do đã chặn icdm-hari-weiss.
+3_Resources/Books/tu-khong-den-mot/
+3_Resources/Books/phuong-phap-thiet-ke-khi-tai-co-ai/
+3_Resources/Books/mentor-chris-brose/
+3_Resources/Books/finding-alphas/
+3_Resources/Books/*.pdf
+
+# Cuốn phuong-phap-thiet-ke-he-thong-cong-nghe ĐƯỢC commit — book.md sạch tuyệt đối
+# (0 lượt trên 617.976 ký tự). Ba tệp dưới đây thì KHÔNG:
+#   hai cổng .py chứa CHÍNH danh mục mã sản phẩm cần bảo vệ (30 và 22 lượt) —
+#   xuất bản bộ dò rò rỉ là xuất bản danh sách thứ cần giấu;
+#   _source_manifest.md ghi lại phép thử đột biến nên mang chính các mã cần bảo vệ.
+3_Resources/Books/phuong-phap-thiet-ke-he-thong-cong-nghe/Phase6-Revised/sec_gate.py
+3_Resources/Books/phuong-phap-thiet-ke-he-thong-cong-nghe/Phase6-Revised/p5_gate.py
+3_Resources/Books/phuong-phap-thiet-ke-he-thong-cong-nghe/_source_manifest.md
+3_Resources/Books/phuong-phap-thiet-ke-he-thong-cong-nghe/_p8_staging/
+# _raw/ giữ bản NLM thô và bản TRƯỚC KHI KHỬ ngữ cảnh người dùng — chúng còn nguyên
+# 50 dòng NLM tự xưng hô với người dùng và tự dựng ví dụ trong lĩnh vực của họ.
+# Giữ trên máy để đối chiếu, không đưa lên repo công khai.
+3_Resources/Books/phuong-phap-thiet-ke-he-thong-cong-nghe/Phase1-Exploration/_raw/
